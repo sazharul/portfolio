@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #0b0f19;
+  --surface: #131a2a;
+  --text: #e8ecf4;
+  --muted: #8891a7;
+  --signal: #38bdf8;
+  --signal-2: #5eead4;
+  --warm: #f5a524;
+  --line: #243049;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-ink: var(--ink);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-signal: var(--signal);
+  --color-signal-2: var(--signal-2);
+  --color-warm: var(--warm);
+  --color-line: var(--line);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-jetbrains-mono);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-space-grotesk), system-ui, sans-serif;
+}
+
+.hero-visual {
+  transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transition: transform 0.35s ease-out;
+}
+
+.hero-visual__stage {
+  transform: translateZ(24px);
+}
+
+.hero-visual__flow-line {
+  animation: hero-flow 2.4s linear infinite;
+}
+
+.hero-visual__packet {
+  opacity: 0.95;
+}
+
+.hero-visual__node {
+  animation: hero-node-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes hero-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -32;
+  }
+}
+
+@keyframes hero-node-pulse {
+  0%,
+  100% {
+    stroke-opacity: 0.45;
+  }
+  50% {
+    stroke-opacity: 0.95;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual,
+  .hero-visual__flow-line,
+  .hero-visual__node {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .hero-visual__packet {
+    display: none;
+  }
 }
