@@ -1,12 +1,32 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { createPageMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "Career story of MD. Azharul Islam — Laravel engineer across agency and product engineering.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "About Azharul Islam Sohan",
+  description:
+    "About MD. Azharul Islam (Sohan) — Senior Laravel & PHP engineer in Dhaka with 8+ years across fintech, insurance, e-commerce, and product engineering at Enorsia, WizTecBD, and HSBLCO.",
+  path: "/about",
+  keywords: [
+    "about Azharul Islam Sohan",
+    "Azharul Islam Sohan career",
+    "Laravel engineer Dhaka",
+    "software engineer Bangladesh",
+    "Enorsia developer",
+    "WizTecBD engineer",
+    "HSBLCO payment gateway",
+  ],
+});
 
 export default function AboutPage() {
   return (
+    <>
+      <JsonLd
+        data={getBreadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ])}
+      />
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
       <div>
         <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">About</p>
@@ -50,5 +70,6 @@ export default function AboutPage() {
         Based in Dhaka · Open to remote roles and EU relocation (Romania / Germany) · Available for select large-scope freelance work.
       </p>
     </div>
+    </>
   );
 }

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { JsonLd } from "@/components/JsonLd";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { getProject, projects } from "@/content/projects";
 import { getCaseStudy } from "@/lib/case-studies";
+import { createPageMetadata, DEFAULT_KEYWORDS, getBreadcrumbJsonLd, getProjectJsonLd } from "@/lib/seo";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -21,10 +23,15 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     return { title: "Project" };
   }
 
-  return {
+  return createPageMetadata({
     title: project.title,
-    description: project.description,
-  };
+    description: `${project.tagline}. ${project.description}`,
+    path: `/projects/${project.slug}`,
+    keywords: [...DEFAULT_KEYWORDS, project.title, ...project.tags, project.company ?? "", project.role ?? ""].filter(
+      Boolean,
+    ),
+    ogType: "article",
+  });
 }
 
 export default async function ProjectDetailPage({ params }: ProjectPageProps) {
@@ -37,39 +44,51 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
-      <div className="space-y-4">
-        <Link href="/projects" className="text-sm text-signal hover:text-text transition-colors">
-          ← Back to projects
-        </Link>
-        <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">{project.company}</p>
-        <h1 className="text-4xl font-bold">{project.title}</h1>
-        <p className="text-muted text-lg">{project.tagline}</p>
-        <div className="flex flex-wrap gap-3 pt-2">
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-warm text-ink text-sm font-medium"
-          >
-            Live demo ↗
-          </a>
-          <a
-            href={project.repoUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-line text-sm"
-          >
-            GitHub
-          </a>
+    <>
+      <JsonLd
+        data={[
+          getProjectJsonLd(project),
+          getBreadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Projects", path: "/projects" },
+            { name: project.title, path: `/projects/${project.slug}` },
+          ]),
+        ]}
+      />
+      <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
+        <div className="space-y-4">
+          <Link href="/projects" className="text-sm text-signal hover:text-text transition-colors">
+            ← Back to projects
+          </Link>
+          <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">{project.company}</p>
+          <h1 className="text-4xl font-bold">{project.title}</h1>
+          <p className="text-muted text-lg">{project.tagline}</p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a
+              href={project.demoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-warm text-ink text-sm font-medium"
+            >
+              Live demo ↗
+            </a>
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-line text-sm"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
-      </div>
 
-      {caseStudy ? (
-        <MarkdownContent content={caseStudy.content} />
-      ) : (
-        <p className="text-muted">{project.description}</p>
-      )}
-    </div>
+        {caseStudy ? (
+          <MarkdownContent content={caseStudy.content} />
+        ) : (
+          <p className="text-muted">{project.description}</p>
+        )}
+      </div>
+    </>
   );
 }

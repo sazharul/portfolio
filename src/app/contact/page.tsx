@@ -1,30 +1,49 @@
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/JsonLd";
+import { createPageMetadata, EMAIL, GITHUB_URL, LINKEDIN_URL, getBreadcrumbJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Contact MD. Azharul Islam for senior Laravel/PHP engineering roles.",
-};
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact Azharul Islam Sohan",
+  description:
+    "Contact Azharul Islam Sohan for senior Laravel & PHP roles, remote engineering work, and fintech, e-commerce, and analytics projects. Email, LinkedIn, and GitHub.",
+  path: "/contact",
+  keywords: [
+    "contact Azharul Islam Sohan",
+    "hire Laravel developer Dhaka",
+    "hire PHP developer Bangladesh",
+    "remote Laravel engineer contact",
+    "Azharul Islam Sohan email",
+    "senior software engineer contact",
+  ],
+});
 
 const links = [
   {
     label: "Email",
-    href: "mailto:ahamedsohan592@gmail.com",
-    value: "ahamedsohan592@gmail.com",
+    href: `mailto:${EMAIL}`,
+    value: EMAIL,
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/azharul-islam-sohan-a75b64260",
+    href: LINKEDIN_URL,
     value: "linkedin.com/in/azharul-islam-sohan",
   },
   {
     label: "GitHub",
-    href: "https://github.com/sazharul",
+    href: GITHUB_URL,
     value: "github.com/sazharul",
   },
 ];
 
 export default function ContactPage() {
   return (
+    <>
+      <JsonLd
+        data={getBreadcrumbJsonLd([
+          { name: "Home", path: "/" },
+          { name: "Contact", path: "/contact" },
+        ])}
+      />
     <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
       <div>
         <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">Contact</p>
@@ -49,5 +68,6 @@ export default function ContactPage() {
         ))}
       </div>
     </div>
+    </>
   );
 }

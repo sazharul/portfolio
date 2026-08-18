@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/content/projects";
+import { SITE_URL } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://mdazharulislam.com";
+  const baseUrl = SITE_URL;
 
   return [
     { url: baseUrl, lastModified: new Date() },

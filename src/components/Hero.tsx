@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeroVisual } from "./HeroVisual";
+import { AUTHOR_SHORT_NAME, JOB_FOCUS, JOB_TITLE, LOCATION } from "@/lib/seo";
 
 const highlights = [
   { value: "8+", label: "Years shipping production code" },
@@ -14,13 +15,15 @@ export function Hero() {
 
       <div className="relative grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
         <div className="space-y-6">
-          <p className="font-mono text-sm uppercase tracking-[0.2em] text-signal">Senior Software Engineer</p>
+          <p className="font-mono text-sm uppercase tracking-[0.2em] text-signal">{JOB_TITLE}</p>
           <h1 className="text-4xl font-bold leading-[1.08] md:text-5xl lg:text-[3.35rem]">
-            Production systems for fintech, commerce, and analytics.
+            {AUTHOR_SHORT_NAME}
           </h1>
+          <p className="text-xl font-medium text-signal md:text-2xl">{JOB_FOCUS}</p>
           <p className="max-w-2xl text-lg leading-relaxed text-muted">
-            I&apos;m MD. Azharul Islam (Sohan), a full-stack engineer focused on Laravel, APIs, and data-heavy
-            products that stay reliable under real business load.
+            Senior Laravel and PHP engineer in {LOCATION} building production systems for fintech, e-commerce,
+            insurance, analytics, and AI — with React, REST APIs, and data-heavy backends that stay reliable under
+            real business load.
           </p>
           <div className="flex flex-wrap gap-3 pt-1">
             <Link

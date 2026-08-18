@@ -1,4 +1,4 @@
-# Portfolio Site — mdazharulislam.com
+# Portfolio Site — azharulislamsohan.com
 
 Next.js portfolio showcasing projects, case studies, and contact links.
 
@@ -23,7 +23,7 @@ npm start
 1. Push `portfolio/` to `github.com/sazharul/portfolio`
 2. Import repo in Vercel
 3. Framework preset: **Next.js**
-4. Add custom domain `mdazharulislam.com`
+4. Add custom domain `azharulislamsohan.com`
 5. On Namecheap DNS:
    - `@` → Vercel
    - `www` → Vercel

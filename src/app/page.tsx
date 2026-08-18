@@ -1,7 +1,26 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
+import { JsonLd } from "@/components/JsonLd";
 import { ProjectCard } from "@/components/ProjectCard";
 import { getFeaturedProjects } from "@/content/projects";
+import { createPageMetadata, DEFAULT_DESCRIPTION, DEFAULT_TITLE, getProfilePageJsonLd } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: DEFAULT_TITLE,
+  description: DEFAULT_DESCRIPTION,
+  path: "/",
+  absoluteTitle: true,
+  keywords: [
+    "Azharul Islam Sohan portfolio",
+    "Azharul Islam Sohan Laravel developer",
+    "MD Azharul Islam software engineer",
+    "Laravel developer Dhaka Bangladesh",
+    "senior PHP engineer portfolio",
+    "fintech developer portfolio",
+    "e-commerce analytics developer",
+  ],
+});
 
 const skills = [
   "Laravel",
@@ -37,6 +56,7 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4">
+      <JsonLd data={getProfilePageJsonLd()} />
       <Hero />
 
       <section className="border-t border-line/60 py-12">
