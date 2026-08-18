@@ -5,17 +5,16 @@ import { projects } from "@/content/projects";
 import { createPageMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Projects by Azharul Islam Sohan",
+  title: "Projects by Azharul Sohan",
   description:
-    "Laravel and PHP projects by Azharul Islam Sohan — e-commerce analytics, payment gateways, insurance platforms, enterprise retail, and AI shopping assistants with live demos.",
+    "Laravel & PHP projects by Azharul and Sohan — e-commerce analytics, payment gateways, insurance platforms, enterprise retail & AI assistants.",
   path: "/projects",
   keywords: [
-    "Azharul Islam Sohan projects",
-    "Laravel portfolio projects",
-    "payment gateway Laravel project",
-    "insurance management system",
-    "e-commerce analytics platform",
-    "AI shopping assistant Laravel",
+    "azharul software engineer projects",
+    "sohan laravel projects",
+    "azharul payment gateway project",
+    "sohan e-commerce analytics",
+    "azharul sohan portfolio projects",
   ],
 });
 

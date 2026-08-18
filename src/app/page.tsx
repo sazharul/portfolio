@@ -1,10 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { HireSection } from "@/components/HireSection";
 import { Hero } from "@/components/Hero";
 import { JsonLd } from "@/components/JsonLd";
 import { ProjectCard } from "@/components/ProjectCard";
+import { hiringFaqs } from "@/content/hiring";
 import { getFeaturedProjects } from "@/content/projects";
-import { createPageMetadata, DEFAULT_DESCRIPTION, DEFAULT_TITLE, getProfilePageJsonLd } from "@/lib/seo";
+import {
+  createPageMetadata,
+  DEFAULT_DESCRIPTION,
+  DEFAULT_TITLE,
+  getFaqJsonLd,
+  getProfilePageJsonLd,
+  HIRING_KEYWORDS,
+} from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: DEFAULT_TITLE,
@@ -12,13 +21,11 @@ export const metadata: Metadata = createPageMetadata({
   path: "/",
   absoluteTitle: true,
   keywords: [
-    "Azharul Islam Sohan portfolio",
-    "Azharul Islam Sohan Laravel developer",
-    "MD Azharul Islam software engineer",
-    "Laravel developer Dhaka Bangladesh",
-    "senior PHP engineer portfolio",
-    "fintech developer portfolio",
-    "e-commerce analytics developer",
+    ...HIRING_KEYWORDS,
+    "azharul software engineer portfolio",
+    "sohan software engineer portfolio",
+    "hire azharul laravel developer",
+    "hire sohan php developer",
   ],
 });
 
@@ -56,8 +63,10 @@ export default function HomePage() {
 
   return (
     <div className="mx-auto max-w-6xl px-4">
-      <JsonLd data={getProfilePageJsonLd()} />
+      <JsonLd data={[getProfilePageJsonLd(), getFaqJsonLd(hiringFaqs)]} />
       <Hero />
+
+      <HireSection />
 
       <section className="border-t border-line/60 py-12">
         <div className="mb-8 max-w-2xl">

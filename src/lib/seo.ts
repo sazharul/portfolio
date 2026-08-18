@@ -2,40 +2,65 @@ import type { Metadata } from "next";
 
 export const SITE_URL = "https://www.azharulislamsohan.com";
 export const SITE_DOMAIN = "azharulislamsohan.com";
-export const SITE_NAME = "Azharul Islam Sohan";
+export const SITE_NAME = "Azharul Sohan";
 export const AUTHOR_NAME = "MD. Azharul Islam (Sohan)";
-export const AUTHOR_SHORT_NAME = "Azharul Islam Sohan";
+export const AUTHOR_SHORT_NAME = "Azharul Sohan";
+export const FIRST_NAME = "Azharul";
+export const LAST_NAME = "Sohan";
+export const FULL_NAME = "Azharul Islam Sohan";
 export const JOB_TITLE = "Senior Software Engineer";
+export const JOB_TITLE_SHORT = "Software Engineer";
 export const JOB_FOCUS = "Laravel & PHP Engineer";
 export const LOCATION = "Dhaka, Bangladesh";
 export const CURRENT_COMPANY = "Enorsia";
 export const PROFILE_IMAGE_PATH = "/profile.jpg";
 
-// Google snippet targets: name, role, skills, location, experience (keep under ~160 chars).
-export const DEFAULT_TITLE = "Azharul Islam Sohan | Senior Laravel & PHP Engineer — Dhaka";
+// Name searches + hiring-intent searches (long-tail, location + skill focused).
+export const DEFAULT_TITLE = "Azharul Sohan | Hire Experienced Software Engineer — Laravel, PHP";
 export const DEFAULT_DESCRIPTION =
-  "MD. Azharul Islam (Sohan) — Senior Software Engineer in Dhaka with 8+ years in Laravel, PHP, React, fintech, e-commerce, insurance, analytics & AI. View projects.";
+  "Hire Azharul (Sohan) — experienced senior software engineer in Dhaka. 8+ years Laravel, PHP, fintech & e-commerce. Remote, contract & full-time.";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/azharul-islam-sohan/";
 export const GITHUB_URL = "https://github.com/sazharul";
 export const EMAIL = "ahamedsohan592@gmail.com";
 
+export const HIRING_KEYWORDS = [
+  "hire software engineer",
+  "hire experienced software engineer",
+  "hire senior software engineer",
+  "hire laravel developer",
+  "hire php developer",
+  "hire software engineer bangladesh",
+  "hire laravel developer dhaka",
+  "hire remote software engineer",
+  "experienced software engineer",
+  "senior software engineer for hire",
+  "best laravel developer bangladesh",
+  "contract software engineer",
+  "freelance laravel developer",
+  "fintech software engineer hire",
+  "e-commerce developer hire",
+];
+
 export const DEFAULT_KEYWORDS = [
-  "Azharul Islam Sohan",
+  ...HIRING_KEYWORDS,
+  "azharul software engineer",
+  "sohan software engineer",
+  "azharul laravel developer",
+  "sohan laravel developer",
+  "azharul php developer",
+  "sohan php developer",
+  "azharul sohan",
+  "azharul",
+  "sohan",
+  FULL_NAME,
   "MD Azharul Islam",
-  "Azharul Islam Sohan Laravel",
-  "Senior Software Engineer Dhaka",
+  "software engineer Dhaka",
   "Laravel developer Bangladesh",
   "PHP developer Dhaka",
-  "full-stack engineer",
-  "Laravel PHP engineer",
-  "React developer Bangladesh",
+  "senior software engineer Bangladesh",
   "fintech software engineer",
   "e-commerce developer",
-  "insurance platform developer",
-  "analytics platform developer",
   "remote Laravel developer",
-  "Enorsia developer",
-  "WizTecBD engineer",
 ];
 
 const robots = {
@@ -140,7 +165,7 @@ export function getWebsiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: SITE_NAME,
-    alternateName: [AUTHOR_NAME, "MD Azharul Islam", "Azharul Islam Sohan Portfolio"],
+    alternateName: [AUTHOR_NAME, FULL_NAME, FIRST_NAME, LAST_NAME, "MD Azharul Islam"],
     url: SITE_URL,
     description: DEFAULT_DESCRIPTION,
     inLanguage: "en-US",
@@ -158,9 +183,9 @@ export function getPersonJsonLd() {
     "@type": "Person",
     "@id": `${SITE_URL}#person`,
     name: AUTHOR_NAME,
-    givenName: "Azharul Islam",
-    familyName: "Sohan",
-    alternateName: ["Sohan", AUTHOR_SHORT_NAME, "MD Azharul Islam"],
+    givenName: FIRST_NAME,
+    familyName: LAST_NAME,
+    alternateName: [FIRST_NAME, LAST_NAME, AUTHOR_SHORT_NAME, FULL_NAME, "MD Azharul Islam"],
     url: SITE_URL,
     image: `${SITE_URL}${PROFILE_IMAGE_PATH}`,
     jobTitle: JOB_TITLE,
@@ -211,6 +236,59 @@ export function getPersonJsonLd() {
       "Payment gateways",
     ],
     sameAs: [LINKEDIN_URL, GITHUB_URL],
+  };
+}
+
+export function getProfessionalServiceJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: `${AUTHOR_SHORT_NAME} — Software Engineering`,
+    url: `${SITE_URL}/contact`,
+    description:
+      "Hire an experienced senior software engineer for Laravel, PHP, fintech, e-commerce, insurance, analytics, and AI product work.",
+    provider: {
+      "@id": `${SITE_URL}#person`,
+    },
+    areaServed: [
+      { "@type": "Country", name: "Bangladesh" },
+      { "@type": "Place", name: "Remote" },
+      { "@type": "Place", name: "European Union" },
+    ],
+    serviceType: [
+      "Software engineering",
+      "Laravel development",
+      "PHP development",
+      "Full-stack development",
+      "Fintech software",
+      "E-commerce development",
+    ],
+    knowsAbout: [
+      "Laravel",
+      "PHP",
+      "React",
+      "MySQL",
+      "REST APIs",
+      "FinTech",
+      "E-commerce",
+      "Analytics",
+      "OpenAI API",
+    ],
+  };
+}
+
+export function getFaqJsonLd(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }
 

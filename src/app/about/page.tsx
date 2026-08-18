@@ -3,18 +3,16 @@ import { JsonLd } from "@/components/JsonLd";
 import { createPageMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About Azharul Islam Sohan",
+  title: "About Azharul Sohan",
   description:
-    "About MD. Azharul Islam (Sohan) — Senior Laravel & PHP engineer in Dhaka with 8+ years across fintech, insurance, e-commerce, and product engineering at Enorsia, WizTecBD, and HSBLCO.",
+    "About Azharul — senior software engineer in Dhaka. Sohan has 8+ years with Laravel, PHP & React across fintech, insurance, e-commerce at Enorsia, WizTecBD & HSBLCO.",
   path: "/about",
   keywords: [
-    "about Azharul Islam Sohan",
-    "Azharul Islam Sohan career",
-    "Laravel engineer Dhaka",
-    "software engineer Bangladesh",
-    "Enorsia developer",
-    "WizTecBD engineer",
-    "HSBLCO payment gateway",
+    "about azharul software engineer",
+    "about sohan software engineer",
+    "azharul laravel career",
+    "sohan developer Dhaka",
+    "azharul sohan about",
   ],
 });
 
