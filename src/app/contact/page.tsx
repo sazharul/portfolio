@@ -4,8 +4,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { hireServices, hiringFaqs } from "@/content/hiring";
 import {
   createPageMetadata,
+  AUTHOR_NAME,
   EMAIL,
-  FIRST_NAME,
   GITHUB_URL,
   HIRING_KEYWORDS,
   LINKEDIN_URL,
@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "Hire Experienced Software Engineer",
   description:
-    "Hire Azharul (Sohan) — experienced senior software engineer for Laravel, PHP, fintech & e-commerce. Remote, contract & full-time. Based in Dhaka, Bangladesh.",
+    "Hire MD. Azharul Islam (Sohan) — experienced senior software engineer for Laravel, PHP, fintech & e-commerce. Remote, contract & full-time. Based in Dhaka, Bangladesh.",
   path: "/contact",
   keywords: [
     ...HIRING_KEYWORDS,
@@ -65,7 +65,7 @@ export default function ContactPage() {
           <h1 className="text-4xl font-bold mt-2">Hire an experienced software engineer</h1>
           <p className="text-muted mt-3 leading-relaxed">
             Need to hire a senior software engineer, experienced Laravel developer, or reliable PHP engineer for
-            production systems? {FIRST_NAME} (Sohan) takes on full-time roles, remote contracts, and select large-scope
+            production systems? {AUTHOR_NAME} takes on full-time roles, remote contracts, and select large-scope
             projects—analytics platforms, payment workflows, complex business logic—not one-off scripts.
           </p>
         </div>

@@ -2,12 +2,17 @@ import type { Metadata } from "next";
 
 export const SITE_URL = "https://www.azharulislamsohan.com";
 export const SITE_DOMAIN = "azharulislamsohan.com";
-export const SITE_NAME = "Azharul Sohan";
+/** Certificate / legal name. */
+export const CERTIFICATE_NAME = "MD. Azharul Islam";
+/** Call name used at work and by colleagues. */
+export const NICKNAME = "Sohan";
+/** Canonical public name — matches LinkedIn. */
 export const AUTHOR_NAME = "MD. Azharul Islam (Sohan)";
-export const AUTHOR_SHORT_NAME = "Azharul Sohan";
+export const SITE_NAME = AUTHOR_NAME;
+export const AUTHOR_SHORT_NAME = AUTHOR_NAME;
 export const FIRST_NAME = "Azharul";
-export const LAST_NAME = "Sohan";
-export const FULL_NAME = "Azharul Islam Sohan";
+export const FAMILY_NAME = "Islam";
+export const FULL_NAME = CERTIFICATE_NAME;
 export const JOB_TITLE = "Senior Software Engineer";
 export const JOB_TITLE_SHORT = "Software Engineer";
 export const JOB_FOCUS = "Laravel & PHP Engineer";
@@ -16,9 +21,9 @@ export const CURRENT_COMPANY = "Enorsia";
 export const PROFILE_IMAGE_PATH = "/profile.jpg";
 
 // Name searches + hiring-intent searches (long-tail, location + skill focused).
-export const DEFAULT_TITLE = "Azharul Sohan | Hire Experienced Software Engineer — Laravel, PHP";
+export const DEFAULT_TITLE = "MD. Azharul Islam (Sohan) | Hire Experienced Software Engineer — Laravel, PHP";
 export const DEFAULT_DESCRIPTION =
-  "Hire Azharul (Sohan) — experienced senior software engineer in Dhaka. 8+ years Laravel, PHP, fintech & e-commerce. Remote, contract & full-time.";
+  "MD. Azharul Islam (Sohan) is a senior software engineer in Dhaka, Bangladesh. 8+ years Laravel, PHP, fintech & e-commerce. Remote, contract & full-time.";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/azharul-islam-sohan/";
 export const GITHUB_URL = "https://github.com/sazharul";
 export const EMAIL = "ahamedsohan592@gmail.com";
@@ -52,8 +57,11 @@ export const DEFAULT_KEYWORDS = [
   "azharul sohan",
   "azharul",
   "sohan",
+  AUTHOR_NAME,
+  CERTIFICATE_NAME,
   FULL_NAME,
   "MD Azharul Islam",
+  "Md. Azharul Islam (Sohan)",
   "software engineer Dhaka",
   "Laravel developer Bangladesh",
   "PHP developer Dhaka",
@@ -79,7 +87,7 @@ const profileImage = {
   url: PROFILE_IMAGE_PATH,
   width: 800,
   height: 800,
-  alt: `${AUTHOR_SHORT_NAME} — ${JOB_TITLE}`,
+  alt: `${AUTHOR_NAME} — ${JOB_TITLE}`,
 };
 
 type PageSeoOptions = {
@@ -130,7 +138,7 @@ export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: DEFAULT_TITLE,
-    template: `%s | ${AUTHOR_SHORT_NAME}`,
+    template: `%s | ${AUTHOR_NAME}`,
   },
   description: DEFAULT_DESCRIPTION,
   keywords: DEFAULT_KEYWORDS,
@@ -165,7 +173,15 @@ export function getWebsiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: SITE_NAME,
-    alternateName: [AUTHOR_NAME, FULL_NAME, FIRST_NAME, LAST_NAME, "MD Azharul Islam"],
+    alternateName: [
+      AUTHOR_NAME,
+      CERTIFICATE_NAME,
+      NICKNAME,
+      FIRST_NAME,
+      "Md. Azharul Islam (Sohan)",
+      "Azharul Islam Sohan",
+      "Azharul Sohan",
+    ],
     url: SITE_URL,
     description: DEFAULT_DESCRIPTION,
     inLanguage: "en-US",
@@ -183,9 +199,19 @@ export function getPersonJsonLd() {
     "@type": "Person",
     "@id": `${SITE_URL}#person`,
     name: AUTHOR_NAME,
+    honorificPrefix: "MD.",
     givenName: FIRST_NAME,
-    familyName: LAST_NAME,
-    alternateName: [FIRST_NAME, LAST_NAME, AUTHOR_SHORT_NAME, FULL_NAME, "MD Azharul Islam"],
+    familyName: FAMILY_NAME,
+    additionalName: NICKNAME,
+    alternateName: [
+      CERTIFICATE_NAME,
+      NICKNAME,
+      "Md. Azharul Islam (Sohan)",
+      "Md. Azharul Islam",
+      "Azharul Islam Sohan",
+      "Azharul Sohan",
+      FIRST_NAME,
+    ],
     url: SITE_URL,
     image: `${SITE_URL}${PROFILE_IMAGE_PATH}`,
     jobTitle: JOB_TITLE,
@@ -243,7 +269,7 @@ export function getProfessionalServiceJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: `${AUTHOR_SHORT_NAME} — Software Engineering`,
+    name: `${AUTHOR_NAME} — Software Engineering`,
     url: `${SITE_URL}/contact`,
     description:
       "Hire an experienced senior software engineer for Laravel, PHP, fintech, e-commerce, insurance, analytics, and AI product work.",
@@ -296,7 +322,7 @@ export function getProfilePageJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    name: `${AUTHOR_SHORT_NAME} — ${JOB_TITLE}`,
+    name: `${AUTHOR_NAME} — ${JOB_TITLE}`,
     description: DEFAULT_DESCRIPTION,
     url: SITE_URL,
     mainEntity: {

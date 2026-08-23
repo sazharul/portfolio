@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { HeroVisual } from "./HeroVisual";
 import {
-  AUTHOR_SHORT_NAME,
-  FIRST_NAME,
+  AUTHOR_NAME,
+  CERTIFICATE_NAME,
   JOB_FOCUS,
   JOB_TITLE,
-  LAST_NAME,
   LOCATION,
+  NICKNAME,
 } from "@/lib/seo";
 
 const highlights = [
@@ -24,13 +24,13 @@ export function Hero() {
         <div className="space-y-6">
           <p className="font-mono text-sm uppercase tracking-[0.2em] text-signal">{JOB_TITLE}</p>
           <h1 className="text-4xl font-bold leading-[1.08] md:text-5xl lg:text-[3.35rem]">
-            {AUTHOR_SHORT_NAME}
+            {AUTHOR_NAME}
           </h1>
           <p className="text-xl font-medium text-signal md:text-2xl">
-            {FIRST_NAME} & {LAST_NAME} — {JOB_FOCUS}
+            {CERTIFICATE_NAME} — known as {NICKNAME}. {JOB_FOCUS}
           </p>
           <p className="max-w-2xl text-lg leading-relaxed text-muted">
-            {FIRST_NAME} is a senior software engineer in {LOCATION}. {LAST_NAME} builds production Laravel and PHP
+            {AUTHOR_NAME} is a senior software engineer in {LOCATION}. He builds production Laravel and PHP
             systems for fintech, e-commerce, insurance, analytics, and AI — with React, REST APIs, and data-heavy
             backends that stay reliable under real business load.
           </p>

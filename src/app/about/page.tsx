@@ -3,9 +3,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { createPageMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "About Azharul Sohan",
+  title: "About",
   description:
-    "About Azharul — senior software engineer in Dhaka. Sohan has 8+ years with Laravel, PHP & React across fintech, insurance, e-commerce at Enorsia, WizTecBD & HSBLCO.",
+    "About MD. Azharul Islam (Sohan) — senior software engineer in Dhaka. 8+ years with Laravel, PHP & React across fintech, insurance, e-commerce at Enorsia, WizTecBD & HSBLCO.",
   path: "/about",
   keywords: [
     "about azharul software engineer",
@@ -33,8 +33,10 @@ export default function AboutPage() {
 
       <div className="space-y-5 text-muted leading-relaxed">
         <p>
-          I&apos;m a Software Engineer with 8+ years of experience building business-critical web applications.
-          My work spans fintech, insurance, e-commerce, education, healthcare, analytics, and AI-powered features.
+          I&apos;m <span className="text-text font-medium">MD. Azharul Islam</span>, known as{" "}
+          <span className="text-text font-medium">Sohan</span> — a Software Engineer with 8+ years of experience
+          building business-critical web applications. My work spans fintech, insurance, e-commerce, education,
+          healthcare, analytics, and AI-powered features.
         </p>
         <p>
           I specialize in understanding business requirements, implementing reliable software, integrating third-party

@@ -32,32 +32,32 @@ export const hireServices = [
 
 export const hiringFaqs: HiringFaq[] = [
   {
-    question: "How do I hire Azharul as a software engineer?",
+    question: "How do I hire MD. Azharul Islam (Sohan) as a software engineer?",
     answer:
-      "Email ahamedsohan592@gmail.com, message on LinkedIn, or use the contact page. Azharul (Sohan) is open to full-time roles, remote contracts, and select large-scope freelance projects.",
+      "Email ahamedsohan592@gmail.com, message on LinkedIn, or use the contact page. MD. Azharul Islam (Sohan) is open to full-time roles, remote contracts, and select large-scope freelance projects.",
   },
   {
     question: "Is Sohan an experienced software engineer?",
     answer:
-      "Yes. Azharul Sohan has 8+ years shipping production software across fintech, insurance, e-commerce, analytics, and AI—at Enorsia, WizTecBD, and HSBLCO Ltd.",
+      "Yes. MD. Azharul Islam (Sohan) has 8+ years shipping production software across fintech, insurance, e-commerce, analytics, and AI—at Enorsia, WizTecBD, and HSBLCO Ltd.",
   },
   {
     question: "Can I hire a Laravel developer in Bangladesh?",
     answer:
-      "Yes. Azharul is a senior Laravel and PHP engineer in Dhaka, Bangladesh, with production experience in APIs, queues, integrations, and scalable MySQL-backed systems.",
+      "Yes. MD. Azharul Islam (Sohan) is a senior Laravel and PHP engineer in Dhaka, Bangladesh, with production experience in APIs, queues, integrations, and scalable MySQL-backed systems.",
   },
   {
-    question: "Does Azharul work remotely?",
+    question: "Does MD. Azharul Islam (Sohan) work remotely?",
     answer:
       "Yes. Sohan works with remote teams and international clients. He is also open to EU relocation for the right long-term role.",
   },
   {
-    question: "What kind of projects should I hire Azharul for?",
+    question: "What kind of projects should I hire Sohan for?",
     answer:
       "Best fit: analytics platforms, payment workflows, insurance logic, e-commerce backends, and AI-assisted product features—not small one-off scripts or basic brochure sites.",
   },
   {
-    question: "What technologies does Azharul specialize in?",
+    question: "What technologies does MD. Azharul Islam (Sohan) specialize in?",
     answer:
       "Laravel, PHP, JavaScript, React, MySQL, REST APIs, Tailwind CSS, OpenAI API, and production tooling for fintech, e-commerce, and analytics products.",
   },
