@@ -17,7 +17,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "Hire Experienced Software Engineer",
   description:
-    "Hire MD. Azharul Islam (Sohan) — experienced senior software engineer for Laravel, PHP, fintech & e-commerce. Remote, contract & full-time. Based in Dhaka, Bangladesh.",
+    "Hire Md. Azharul Islam (Sohan) — senior Laravel/PHP engineer, 7+ years in payments, insurance and e-commerce. Remote and international. Based in Dhaka, Bangladesh.",
   path: "/contact",
   keywords: [
     ...HIRING_KEYWORDS,
@@ -37,7 +37,7 @@ const links = [
   {
     label: "LinkedIn",
     href: LINKEDIN_URL,
-    value: "linkedin.com/in/azharul-islam-sohan",
+    value: "linkedin.com/in/azharul-islam-sohan-a75b64260",
   },
   {
     label: "GitHub",

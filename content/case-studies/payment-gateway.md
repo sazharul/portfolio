@@ -1,7 +1,7 @@
 # Case Study: Payment Gateway Platform
 
 **Type:** FinTech / Payment Gateway  
-**Company:** HSBLCO Ltd.  
+**Company:** Hsblco Solution  
 **Duration:** ~1 Year  
 **Role:** Primary Implementation Engineer  
 **Status:** Production (US client)

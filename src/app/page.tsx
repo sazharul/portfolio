@@ -33,10 +33,14 @@ const skills = [
   "Laravel",
   "PHP",
   "JavaScript",
+  "TypeScript",
   "MySQL",
   "REST APIs",
   "React",
+  "Next.js",
   "Tailwind CSS",
+  "ClickHouse",
+  "Redis",
   "E-commerce",
   "FinTech",
   "Analytics",
@@ -119,7 +123,7 @@ export default function HomePage() {
           <div>
             <p className="font-mono text-xs uppercase tracking-wider text-signal">Career path</p>
             <p className="mt-2 text-sm leading-relaxed text-muted">
-              HSBLCO Ltd. → WizTecBD → Enorsia (Pakiza Group) · Promoted to Team Leader in ~6 months
+              Hsblco Solution → Wizard Software → Enorsia (Pakiza Group) · Promoted to Team Leader in ~6 months
             </p>
           </div>
           <Link

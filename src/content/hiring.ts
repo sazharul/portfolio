@@ -25,31 +25,31 @@ export const hireServices = [
     description: "OpenAI-powered assistants, search, and automation embedded in real production workflows—not demos only.",
   },
   {
-    title: "Remote & EU-ready",
-    description: "Based in Dhaka, available for remote work and open to EU relocation (Romania / Germany).",
+    title: "Remote & international",
+    description: "Based in Dhaka, available for remote work and open to international Laravel/backend roles.",
   },
 ];
 
 export const hiringFaqs: HiringFaq[] = [
   {
-    question: "How do I hire MD. Azharul Islam (Sohan) as a software engineer?",
+    question: "How do I hire Md. Azharul Islam (Sohan) as a software engineer?",
     answer:
-      "Email ahamedsohan592@gmail.com, message on LinkedIn, or use the contact page. MD. Azharul Islam (Sohan) is open to full-time roles, remote contracts, and select large-scope freelance projects.",
+      "Email ahamedsohan592@gmail.com, message on LinkedIn, or use the contact page. Md. Azharul Islam (Sohan) is open to full-time roles, remote contracts, and select large-scope freelance projects.",
   },
   {
     question: "Is Sohan an experienced software engineer?",
     answer:
-      "Yes. MD. Azharul Islam (Sohan) has 8+ years shipping production software across fintech, insurance, e-commerce, analytics, and AI—at Enorsia, WizTecBD, and HSBLCO Ltd.",
+      "Yes. Md. Azharul Islam (Sohan) has 7+ years shipping production software across fintech, insurance, e-commerce, analytics, and AI—at Enorsia (Pakiza Group), Wizard Software & Technology Bangladesh Ltd., and Hsblco Solution.",
   },
   {
     question: "Can I hire a Laravel developer in Bangladesh?",
     answer:
-      "Yes. MD. Azharul Islam (Sohan) is a senior Laravel and PHP engineer in Dhaka, Bangladesh, with production experience in APIs, queues, integrations, and scalable MySQL-backed systems.",
+      "Yes. Md. Azharul Islam (Sohan) is a senior Laravel and PHP engineer in Dhaka, Bangladesh, with production experience in APIs, queues, integrations, and scalable MySQL-backed systems.",
   },
   {
-    question: "Does MD. Azharul Islam (Sohan) work remotely?",
+    question: "Does Md. Azharul Islam (Sohan) work remotely?",
     answer:
-      "Yes. Sohan works with remote teams and international clients. He is also open to EU relocation for the right long-term role.",
+      "Yes. Sohan works with remote teams and international clients. He is open to remote and international Laravel/backend roles.",
   },
   {
     question: "What kind of projects should I hire Sohan for?",
@@ -57,7 +57,7 @@ export const hiringFaqs: HiringFaq[] = [
       "Best fit: analytics platforms, payment workflows, insurance logic, e-commerce backends, and AI-assisted product features—not small one-off scripts or basic brochure sites.",
   },
   {
-    question: "What technologies does MD. Azharul Islam (Sohan) specialize in?",
+    question: "What technologies does Md. Azharul Islam (Sohan) specialize in?",
     answer:
       "Laravel, PHP, JavaScript, React, MySQL, REST APIs, Tailwind CSS, OpenAI API, and production tooling for fintech, e-commerce, and analytics products.",
   },

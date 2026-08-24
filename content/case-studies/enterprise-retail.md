@@ -1,7 +1,7 @@
 # Case Study: Enterprise Retail Platform
 
 **Type:** Enterprise Retail  
-**Company:** WizTecBD  
+**Company:** Wizard Software & Technology Bangladesh Ltd.  
 **Role:** Lead Implementation Engineer  
 **Status:** Production
 

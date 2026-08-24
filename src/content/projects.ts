@@ -22,8 +22,8 @@ export const projects: Project[] = [
     featured: true,
     demoUrl: "https://analytics.azharulislamsohan.com",
     repoUrl: "https://github.com/sazharul/ecommerce-analytics-platform",
-    company: "Portfolio Demo",
-    role: "Full-stack implementation",
+    company: "Enorsia (Pakiza Group)",
+    role: "Software Developer",
   },
   {
     slug: "payment-gateway",
@@ -35,8 +35,8 @@ export const projects: Project[] = [
     featured: true,
     demoUrl: "https://payments.azharulislamsohan.com",
     repoUrl: "https://github.com/sazharul/payment-gateway-demo",
-    company: "HSBLCO Ltd.",
-    role: "Primary Implementation Engineer",
+    company: "Hsblco Solution",
+    role: "Full-Stack Web Developer → Team Leader",
   },
   {
     slug: "insurance-platform",
@@ -48,8 +48,8 @@ export const projects: Project[] = [
     featured: true,
     demoUrl: "https://payments.azharulislamsohan.com",
     repoUrl: "https://github.com/sazharul/insurance-calculator-demo",
-    company: "WizTecBD",
-    role: "Lead Laravel Developer",
+    company: "Wizard Software & Technology Bangladesh Ltd.",
+    role: "Software Engineer — informal technical lead",
   },
   {
     slug: "enterprise-retail",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     featured: false,
     demoUrl: "https://analytics.azharulislamsohan.com",
     repoUrl: "https://github.com/sazharul",
-    company: "WizTecBD",
+    company: "Wizard Software & Technology Bangladesh Ltd.",
     role: "Lead Implementation Engineer",
   },
   {
@@ -74,8 +74,8 @@ export const projects: Project[] = [
     featured: false,
     demoUrl: "https://analytics.azharulislamsohan.com",
     repoUrl: "https://github.com/sazharul",
-    company: "Enorsia",
-    role: "Implementation Engineer",
+    company: "Enorsia (Pakiza Group)",
+    role: "Software Developer",
   },
 ];
 

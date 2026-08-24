@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { hireServices } from "@/content/hiring";
-import { AUTHOR_NAME, NICKNAME, JOB_TITLE } from "@/lib/seo";
+import { AUTHOR_NAME, NICKNAME, JOB_TITLE, YEARS_EXPERIENCE } from "@/lib/seo";
 
 export function HireSection() {
   return (
@@ -12,7 +12,7 @@ export function HireSection() {
         </h2>
         <p className="mt-4 text-muted leading-relaxed">
           Looking to hire a senior software engineer, experienced Laravel developer, or reliable PHP engineer for
-          production work? {AUTHOR_NAME} is an {JOB_TITLE.toLowerCase()} in Dhaka with 8+ years building
+          production work? {AUTHOR_NAME} is a {JOB_TITLE} in Dhaka with {YEARS_EXPERIENCE} years building
           systems clients actually depend on—fintech, e-commerce, insurance, analytics, and AI.
         </p>
         <p className="mt-3 text-muted leading-relaxed">

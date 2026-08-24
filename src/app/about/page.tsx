@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
-import { createPageMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
+import {
+  CERTIFICATE_NAME,
+  COMPANY_HSBLCO,
+  COMPANY_WIZARD,
+  CURRENT_COMPANY,
+  CURRENT_ROLE,
+  EDUCATION,
+  NICKNAME,
+  YEARS_EXPERIENCE,
+  createPageMetadata,
+  getBreadcrumbJsonLd,
+} from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
   title: "About",
   description:
-    "About MD. Azharul Islam (Sohan) — senior software engineer in Dhaka. 8+ years with Laravel, PHP & React across fintech, insurance, e-commerce at Enorsia, WizTecBD & HSBLCO.",
+    "About Md. Azharul Islam (Sohan) — senior Laravel/PHP engineer in Dhaka. 7+ years shipping payment, insurance and e-commerce systems at Enorsia, Wizard Software and Hsblco Solution.",
   path: "/about",
   keywords: [
     "about azharul software engineer",
@@ -25,51 +36,74 @@ export default function AboutPage() {
           { name: "About", path: "/about" },
         ])}
       />
-    <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
-      <div>
-        <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">About</p>
-        <h1 className="text-4xl font-bold mt-2">Who I am</h1>
-      </div>
+      <div className="max-w-3xl mx-auto px-4 py-12 space-y-8">
+        <div>
+          <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">About</p>
+          <h1 className="text-4xl font-bold mt-2">Who I am</h1>
+        </div>
 
-      <div className="space-y-5 text-muted leading-relaxed">
-        <p>
-          I&apos;m <span className="text-text font-medium">MD. Azharul Islam</span>, known as{" "}
-          <span className="text-text font-medium">Sohan</span> — a Software Engineer with 8+ years of experience
-          building business-critical web applications. My work spans fintech, insurance, e-commerce, education,
-          healthcare, analytics, and AI-powered features.
-        </p>
-        <p>
-          I specialize in understanding business requirements, implementing reliable software, integrating third-party
-          services, and delivering production-ready systems. I&apos;m honest about what I built versus what I implemented
-          under technical guidance.
-        </p>
-      </div>
+        <div className="space-y-5 text-muted leading-relaxed">
+          <p>
+            I&apos;m <span className="text-text font-medium">{CERTIFICATE_NAME}</span>, known as{" "}
+            <span className="text-text font-medium">{NICKNAME}</span> — a backend-focused full-stack engineer
+            with {YEARS_EXPERIENCE} years of production experience turning complex business rules into reliable
+            Laravel/PHP software.
+          </p>
+          <p>
+            I&apos;ve owned systems where correctness matters: a centralized payment gateway for a US client, an
+            insurance platform with multi-formula premium and commission logic, and live UK fashion e-commerce work
+            spanning shipping, marketplaces, analytics, and a production AI shopping assistant.
+          </p>
+        </div>
 
-      <div className="space-y-6">
-        <h2 className="text-2xl font-semibold">Career journey</h2>
-        <div className="space-y-5">
-          <div className="border-l-2 border-signal pl-4">
-            <p className="font-mono text-xs text-signal-2">2025 – Present · Enorsia</p>
-            <p className="font-semibold mt-1">Software Developer — UK fashion e-commerce</p>
-            <p className="text-muted text-sm mt-2">Analytics, shipping APIs, marketplaces, AI assistant features.</p>
-          </div>
-          <div className="border-l-2 border-line pl-4">
-            <p className="font-mono text-xs text-signal-2">2022 – 2025 · WizTecBD</p>
-            <p className="font-semibold mt-1">Lead implementation engineer</p>
-            <p className="text-muted text-sm mt-2">Insurance, enterprise retail, education platforms.</p>
-          </div>
-          <div className="border-l-2 border-line pl-4">
-            <p className="font-mono text-xs text-signal-2">2019 – 2022 · HSBLCO Ltd.</p>
-            <p className="font-semibold mt-1">Full-Stack → Team Leader</p>
-            <p className="text-muted text-sm mt-2">Payment gateway (US client), client recovery, led 5 interns.</p>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-semibold">Career journey</h2>
+          <div className="space-y-5">
+            <div className="border-l-2 border-signal pl-4">
+              <p className="font-mono text-xs text-signal-2">Jul 2025 – Present · {CURRENT_COMPANY}</p>
+              <p className="font-semibold mt-1">{CURRENT_ROLE} — UK fashion e-commerce</p>
+              <p className="text-muted text-sm mt-2">
+                Shipping APIs (DHL, Evri, Royal Mail), marketplace channels, ClickHouse/Redis analytics, Laravel Vite
+                + Tailwind adoption, and a production AI shopping assistant (OpenAI, LangGraph).
+              </p>
+            </div>
+            <div className="border-l-2 border-line pl-4">
+              <p className="font-mono text-xs text-signal-2">Sep 2022 – Jun 2025 · {COMPANY_WIZARD}</p>
+              <p className="font-semibold mt-1">Software Engineer — informal technical lead</p>
+              <p className="text-muted text-sm mt-2">
+                Led ~10 months of insurance platform work (premium, coverage, commission rules, Flutter APIs) and
+                backend on PerfectoBD retail (inventory, POS, promotions). Rebuilt slow public APIs in Node.js.
+              </p>
+            </div>
+            <div className="border-l-2 border-line pl-4">
+              <p className="font-mono text-xs text-signal-2">Jul 2019 – Aug 2022 · {COMPANY_HSBLCO}</p>
+              <p className="font-semibold mt-1">Full-Stack Web Developer → Team Leader</p>
+              <p className="text-muted text-sm mt-2">
+                Promoted in ~6 months. Built EpayMaker, a centralized Laravel payment gateway for a US client.
+                Recovered at-risk client projects; mentored 5 interns.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <p className="text-sm font-mono text-muted border border-line rounded-xl p-4 bg-surface">
-        Based in Dhaka · Open to remote roles and EU relocation (Romania / Germany) · Available for select large-scope freelance work.
-      </p>
-    </div>
+        <div className="space-y-6">
+          <h2 className="text-2xl font-semibold">Education</h2>
+          <div className="space-y-5">
+            <div className="border-l-2 border-line pl-4">
+              <p className="font-mono text-xs text-signal-2">Aug 2023 – Dec 2027 · {EDUCATION}</p>
+              <p className="font-semibold mt-1">B.Sc. in Computer Science & Engineering</p>
+            </div>
+            <div className="border-l-2 border-line pl-4">
+              <p className="font-mono text-xs text-signal-2">Mar 2017 – Sep 2017 · Creative IT</p>
+              <p className="font-semibold mt-1">Laravel training</p>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-sm font-mono text-muted border border-line rounded-xl p-4 bg-surface">
+          Based in Dhaka · Open to remote and international Laravel/backend roles · Completing BSc in CSE
+        </p>
+      </div>
     </>
   );
 }

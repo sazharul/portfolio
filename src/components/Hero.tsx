@@ -7,12 +7,13 @@ import {
   JOB_TITLE,
   LOCATION,
   NICKNAME,
+  YEARS_EXPERIENCE,
 } from "@/lib/seo";
 
 const highlights = [
-  { value: "8+", label: "Years shipping production code" },
+  { value: YEARS_EXPERIENCE, label: "Years shipping payment, insurance & e-commerce systems" },
   { value: "5", label: "Domains: fintech, retail, insurance, analytics, AI" },
-  { value: "Remote", label: "Open to EU relocation (Romania / Germany)" },
+  { value: "Remote", label: "Open to remote and international Laravel/backend roles" },
 ];
 
 export function Hero() {

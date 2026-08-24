@@ -2,29 +2,35 @@ import type { Metadata } from "next";
 
 export const SITE_URL = "https://www.azharulislamsohan.com";
 export const SITE_DOMAIN = "azharulislamsohan.com";
-/** Certificate / legal name. */
-export const CERTIFICATE_NAME = "MD. Azharul Islam";
+/** Certificate / legal name — matches LinkedIn. */
+export const CERTIFICATE_NAME = "Md. Azharul Islam";
 /** Call name used at work and by colleagues. */
 export const NICKNAME = "Sohan";
 /** Canonical public name — matches LinkedIn. */
-export const AUTHOR_NAME = "MD. Azharul Islam (Sohan)";
+export const AUTHOR_NAME = "Md. Azharul Islam (Sohan)";
 export const SITE_NAME = AUTHOR_NAME;
 export const AUTHOR_SHORT_NAME = AUTHOR_NAME;
 export const FIRST_NAME = "Azharul";
 export const FAMILY_NAME = "Islam";
 export const FULL_NAME = CERTIFICATE_NAME;
-export const JOB_TITLE = "Senior Software Engineer";
+export const JOB_TITLE = "Senior Software Engineer (Laravel/PHP)";
 export const JOB_TITLE_SHORT = "Software Engineer";
-export const JOB_FOCUS = "Laravel & PHP Engineer";
+export const JOB_FOCUS = "7+ years shipping payment, insurance & e-commerce systems";
 export const LOCATION = "Dhaka, Bangladesh";
-export const CURRENT_COMPANY = "Enorsia";
+export const YEARS_EXPERIENCE = "7+";
+export const CURRENT_COMPANY = "Enorsia (Pakiza Group)";
+export const CURRENT_ROLE = "Software Developer";
+export const COMPANY_WIZARD = "Wizard Software & Technology Bangladesh Ltd.";
+export const COMPANY_HSBLCO = "Hsblco Solution";
+export const EDUCATION = "Sonargaon University (SU)";
 export const PROFILE_IMAGE_PATH = "/profile.jpg";
 
 // Name searches + hiring-intent searches (long-tail, location + skill focused).
-export const DEFAULT_TITLE = "MD. Azharul Islam (Sohan) | Hire Experienced Software Engineer — Laravel, PHP";
+export const DEFAULT_TITLE =
+  "Md. Azharul Islam (Sohan) | Senior Software Engineer (Laravel/PHP) — 7+ Years";
 export const DEFAULT_DESCRIPTION =
-  "MD. Azharul Islam (Sohan) is a senior software engineer in Dhaka, Bangladesh. 8+ years Laravel, PHP, fintech & e-commerce. Remote, contract & full-time.";
-export const LINKEDIN_URL = "https://www.linkedin.com/in/azharul-islam-sohan/";
+  "Md. Azharul Islam (Sohan) is a senior Laravel/PHP engineer in Dhaka, Bangladesh. 7+ years shipping payment, insurance and e-commerce systems. Remote and international roles.";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/azharul-islam-sohan-a75b64260";
 export const GITHUB_URL = "https://github.com/sazharul";
 export const EMAIL = "ahamedsohan592@gmail.com";
 
@@ -61,6 +67,7 @@ export const DEFAULT_KEYWORDS = [
   CERTIFICATE_NAME,
   FULL_NAME,
   "MD Azharul Islam",
+  "Md. Azharul Islam",
   "Md. Azharul Islam (Sohan)",
   "software engineer Dhaka",
   "Laravel developer Bangladesh",
@@ -199,7 +206,7 @@ export function getPersonJsonLd() {
     "@type": "Person",
     "@id": `${SITE_URL}#person`,
     name: AUTHOR_NAME,
-    honorificPrefix: "MD.",
+    honorificPrefix: "Md.",
     givenName: FIRST_NAME,
     familyName: FAMILY_NAME,
     additionalName: NICKNAME,
@@ -233,26 +240,35 @@ export function getPersonJsonLd() {
     worksFor: {
       "@type": "Organization",
       name: CURRENT_COMPANY,
-      jobTitle: "Software Developer",
+      jobTitle: CURRENT_ROLE,
     },
     alumniOf: [
       {
-        "@type": "Organization",
-        name: "WizTecBD",
-        description: "Lead implementation engineer for insurance, retail, and education platforms.",
+        "@type": "CollegeOrUniversity",
+        name: EDUCATION,
+        description: "B.Sc. in Computer Science and Engineering (2023–2027).",
       },
       {
         "@type": "Organization",
-        name: "HSBLCO Ltd.",
-        description: "Payment gateway implementation and team leadership for US fintech client.",
+        name: COMPANY_WIZARD,
+        description: "Software Engineer and informal technical lead for insurance, retail, and education platforms.",
+      },
+      {
+        "@type": "Organization",
+        name: COMPANY_HSBLCO,
+        description: "Full-stack developer promoted to Team Leader; US payment gateway and client recovery work.",
       },
     ],
     knowsAbout: [
       "Laravel",
       "PHP",
       "JavaScript",
+      "TypeScript",
       "React",
+      "Next.js",
       "MySQL",
+      "ClickHouse",
+      "Redis",
       "REST APIs",
       "E-commerce",
       "FinTech",
@@ -279,7 +295,7 @@ export function getProfessionalServiceJsonLd() {
     areaServed: [
       { "@type": "Country", name: "Bangladesh" },
       { "@type": "Place", name: "Remote" },
-      { "@type": "Place", name: "European Union" },
+      { "@type": "Place", name: "International" },
     ],
     serviceType: [
       "Software engineering",

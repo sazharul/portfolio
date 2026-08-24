@@ -1,7 +1,7 @@
 # Case Study: Insurance Management System
 
 **Type:** Insurance Technology  
-**Company:** WizTecBD  
+**Company:** Wizard Software & Technology Bangladesh Ltd.  
 **Duration:** ~10 Months  
 **Role:** Lead Laravel Developer  
 **Status:** Production
