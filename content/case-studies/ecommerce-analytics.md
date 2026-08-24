@@ -3,13 +3,15 @@
 **Type:** Analytics / Data Platform  
 **Company:** Enorsia (Pakiza Group)  
 **Role:** Implementation Engineer (under engineering lead guidance)  
-**Status:** Production
+**Status:** Production (work experience) + Portfolio recreation (open source)
 
 ---
 
 ## Overview
 
 Enorsia's management needed visibility into customer behavior on their UK fashion e-commerce site — visitor tracking, engagement metrics, conversion funnels, and product analytics. I contributed to building this internal analytics platform under the engineering lead's technical direction.
+
+The open-source portfolio recreation (`ecommerce-analytics-platform`) demonstrates the same architectural patterns at a showcase-friendly scale.
 
 ---
 
@@ -40,12 +42,25 @@ Enorsia's management needed visibility into customer behavior on their UK fashio
 | Layer | Technology |
 |-------|-----------|
 | Backend | Laravel, PHP, REST APIs |
-| Database | MySQL, ClickHouse, Redis |
-| Frontend | JavaScript (dashboard UI) |
-| Tools | Git |
+| Database | MySQL, Redis |
+| Frontend | JavaScript SDK + Blade dashboards |
+| Tools | Git, PHPUnit/Pest |
 
 ---
 
-## Portfolio Recreation
+## Portfolio Recreation Highlights
 
-Open-source demo: `ecommerce-analytics-platform` — event tracking API, session grouping, funnel analysis, admin dashboard, demo storefront.
+Open-source demo: [ecommerce-analytics-platform](https://github.com/sazharul/ecommerce-analytics-platform)
+
+| Pattern | Implementation |
+|---------|----------------|
+| Resilient SDK | localStorage queue, exponential backoff, offline flush |
+| Secure ingest | Bearer API key, rate limiting, validation |
+| Session resolution | Redis with 30-min gap + DB fallback |
+| Idempotent ingest | Client UUID + `updateOrInsert` on `event_id` |
+| Bot detection | UA patterns + Cloudflare bot score |
+| Structured logging | Step-coded `AnalyticsLogger` |
+| Admin drill-down | Session list + event timeline |
+| Tests | 43+ PHPUnit feature tests |
+
+**Demo:** [analytics.azharulislamsohan.com](https://analytics.azharulislamsohan.com)

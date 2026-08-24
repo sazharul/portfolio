@@ -18,7 +18,7 @@ export const projects: Project[] = [
     tagline: "Event tracking, visitor journeys, and business dashboards",
     description:
       "Portfolio recreation of a production-style analytics system with event ingestion, session grouping, funnel reporting, and an admin dashboard.",
-    tags: ["Laravel", "MySQL", "Analytics", "REST API", "Chart.js"],
+    tags: ["Laravel", "MySQL", "Redis", "Analytics", "REST API"],
     featured: true,
     demoUrl: "https://analytics.azharulislamsohan.com",
     repoUrl: "https://github.com/sazharul/ecommerce-analytics-platform",
