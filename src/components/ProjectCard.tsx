@@ -33,22 +33,35 @@ export function ProjectCard({ project }: ProjectCardProps) {
         >
           Case study →
         </Link>
-        <a
-          href={project.demoUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-1 text-sm text-warm hover:text-text transition-colors"
-        >
-          Live demo ↗
-        </a>
-        <a
-          href={project.repoUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-1 text-sm text-muted hover:text-text transition-colors"
-        >
-          GitHub
-        </a>
+        {project.demoUrl ? (
+          <a
+            href={project.demoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 text-sm text-warm hover:text-text transition-colors"
+          >
+            Live demo ↗
+          </a>
+        ) : null}
+        {project.demoUrl ? (
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 text-sm text-muted hover:text-text transition-colors"
+          >
+            GitHub
+          </a>
+        ) : (
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 text-sm text-signal hover:text-text transition-colors"
+          >
+            View on GitHub ↗
+          </a>
+        )}
       </div>
     </article>
   );

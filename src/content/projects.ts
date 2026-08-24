@@ -5,7 +5,7 @@ export type Project = {
   description: string;
   tags: string[];
   featured: boolean;
-  demoUrl: string;
+  demoUrl?: string;
   repoUrl: string;
   company?: string;
   role?: string;
@@ -17,10 +17,9 @@ export const projects: Project[] = [
     title: "E-commerce Analytics Platform",
     tagline: "Event tracking, visitor journeys, and business dashboards",
     description:
-      "Portfolio recreation of a production-style analytics system with event ingestion, session grouping, funnel reporting, and an admin dashboard.",
+      "Open-source GitHub showcase of production-style analytics: event ingestion, Redis session resolution, bot detection, funnel dashboards, and 43+ tests. Clone locally to explore — no public live demo.",
     tags: ["Laravel", "MySQL", "Redis", "Analytics", "REST API"],
     featured: true,
-    demoUrl: "https://analytics.azharulislamsohan.com",
     repoUrl: "https://github.com/sazharul/ecommerce-analytics-platform",
     company: "Enorsia (Pakiza Group)",
     role: "Software Developer",

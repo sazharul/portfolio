@@ -3,7 +3,7 @@
 **Type:** Analytics / Data Platform  
 **Company:** Enorsia (Pakiza Group)  
 **Role:** Implementation Engineer (under engineering lead guidance)  
-**Status:** Production (work experience) + Portfolio recreation (open source)
+**Status:** Production (work experience) + GitHub portfolio showcase (open source, local only)
 
 ---
 
@@ -11,7 +11,7 @@
 
 Enorsia's management needed visibility into customer behavior on their UK fashion e-commerce site — visitor tracking, engagement metrics, conversion funnels, and product analytics. I contributed to building this internal analytics platform under the engineering lead's technical direction.
 
-The open-source portfolio recreation (`ecommerce-analytics-platform`) demonstrates the same architectural patterns at a showcase-friendly scale.
+The open-source recreation on GitHub demonstrates the same architectural patterns at a showcase-friendly scale. **There is no public live demo** — the code is published for review on GitHub; reviewers can clone and run locally.
 
 ---
 
@@ -44,13 +44,13 @@ The open-source portfolio recreation (`ecommerce-analytics-platform`) demonstrat
 | Backend | Laravel, PHP, REST APIs |
 | Database | MySQL, Redis |
 | Frontend | JavaScript SDK + Blade dashboards |
-| Tools | Git, PHPUnit/Pest |
+| Tools | Git, PHPUnit |
 
 ---
 
-## Portfolio Recreation Highlights
+## Portfolio Recreation (GitHub)
 
-Open-source demo: [ecommerce-analytics-platform](https://github.com/sazharul/ecommerce-analytics-platform)
+**Repository:** [github.com/sazharul/ecommerce-analytics-platform](https://github.com/sazharul/ecommerce-analytics-platform)
 
 | Pattern | Implementation |
 |---------|----------------|
@@ -63,4 +63,16 @@ Open-source demo: [ecommerce-analytics-platform](https://github.com/sazharul/eco
 | Admin drill-down | Session list + event timeline |
 | Tests | 43+ PHPUnit feature tests |
 
-**Demo:** [analytics.azharulislamsohan.com](https://analytics.azharulislamsohan.com)
+### Explore locally
+
+```bash
+git clone https://github.com/sazharul/ecommerce-analytics-platform.git
+cd ecommerce-analytics-platform
+composer install && cp .env.example .env && php artisan key:generate
+touch database/database.sqlite && php artisan migrate --seed
+npm install && npm run build && php artisan serve
+```
+
+Then open `/demo-store` and `/admin/tracker/dashboard` (login: `admin@analytics.demo` / `password`).
+
+**Note:** Production EnoxTracker code remains private. This repo is an original recreation for portfolio code review — not a copy of the production codebase.

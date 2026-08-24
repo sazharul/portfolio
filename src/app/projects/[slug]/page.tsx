@@ -64,21 +64,23 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <h1 className="text-4xl font-bold">{project.title}</h1>
           <p className="text-muted text-lg">{project.tagline}</p>
           <div className="flex flex-wrap gap-3 pt-2">
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-warm text-ink text-sm font-medium"
-            >
-              Live demo ↗
-            </a>
+            {project.demoUrl ? (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-warm text-ink text-sm font-medium"
+              >
+                Live demo ↗
+              </a>
+            ) : null}
             <a
               href={project.repoUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-line text-sm"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-line text-sm font-medium"
             >
-              GitHub
+              {project.demoUrl ? "GitHub" : "View on GitHub ↗"}
             </a>
           </div>
         </div>
