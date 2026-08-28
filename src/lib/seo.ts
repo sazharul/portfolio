@@ -30,7 +30,7 @@ export const DEFAULT_TITLE =
   "Md. Azharul Islam (Sohan) | Senior Software Engineer (Laravel/PHP) — 7+ Years";
 export const DEFAULT_DESCRIPTION =
   "Md. Azharul Islam (Sohan) is a senior Laravel/PHP engineer in Dhaka, Bangladesh. 7+ years shipping payment, insurance and e-commerce systems. Remote and international roles.";
-export const LINKEDIN_URL = "https://www.linkedin.com/in/azharul-islam-sohan-a75b64260";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/azharul-islam-sohan";
 export const GITHUB_URL = "https://github.com/sazharul";
 export const EMAIL = "ahamedsohan592@gmail.com";
 

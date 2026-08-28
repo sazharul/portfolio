@@ -37,7 +37,7 @@ const links = [
   {
     label: "LinkedIn",
     href: LINKEDIN_URL,
-    value: "linkedin.com/in/azharul-islam-sohan-a75b64260",
+    value: "linkedin.com/in/azharul-islam-sohan",
   },
   {
     label: "GitHub",
