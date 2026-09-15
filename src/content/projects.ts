@@ -66,13 +66,13 @@ export const projects: Project[] = [
   {
     slug: "insurance-platform",
     title: "Insurance Management System",
-    tagline: "Complex business-rule engine with mobile API integration",
+    tagline: "12+ premium calculators with admin tariff CMS and Flutter REST APIs",
     description:
-      "Insurance platform with premium calculation, policy management, customer dashboards, and Flutter mobile APIs.",
-    tags: ["Laravel", "Business Rules", "REST API", "MySQL"],
+      "Non-life insurance platform — fire, motor, marine, mediclaim premium engines, customer dashboards, SSLCommerz checkout, and mobile APIs. Production at eastlandinsurance.com. Open-source CoverSure demo on GitHub.",
+    tags: ["Laravel", "Insurance", "Premium Calculator", "REST API", "MySQL", "SSLCommerz"],
     featured: true,
-    demoUrl: "https://payments.azharulislamsohan.com",
-    repoUrl: "https://github.com/sazharul/insurance-calculator-demo",
+    demoUrl: "https://www.eastlandinsurance.com/",
+    repoUrl: "https://github.com/sazharul/insurance-platform-demo",
     company: "Wizard Software & Technology Bangladesh Ltd.",
     role: "Software Engineer — informal technical lead",
   },

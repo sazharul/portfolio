@@ -16,6 +16,7 @@ const CUSTOM_CASE_STUDY_SLUGS = new Set([
   "ecommerce-analytics",
   "ai-shopping-assistant",
   "reverb-platform",
+  "insurance-platform",
 ]);
 
 export async function generateStaticParams() {

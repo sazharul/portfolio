@@ -3,14 +3,14 @@
 **Type:** Insurance Technology  
 **Company:** Wizard Software & Technology Bangladesh Ltd.  
 **Duration:** ~10 Months  
-**Role:** Lead Laravel Developer  
-**Status:** Production
+**Role:** Software Engineer — informal technical lead  
+**Status:** Production — [eastlandinsurance.com](https://www.eastlandinsurance.com/)
 
 ---
 
 ## Overview
 
-An insurance company needed a digital platform for premium calculation, policy management, customer dashboards, and mobile app integration. The insurance company provided business rules and formulas; my job was to implement them correctly in software.
+A non-life insurance company needed a digital platform for premium calculation, policy management, customer dashboards, and mobile app integration. The insurer provided business rules and formulas; my job was to implement them correctly in software.
 
 ---
 
@@ -26,4 +26,4 @@ An insurance company needed a digital platform for premium calculation, policy m
 
 ## Portfolio Recreation
 
-Planned demo: `insurance-calculator-demo` — policy management, configurable premium rules, dashboard, reports.
+Open-source demo: [`insurance-platform-demo`](https://github.com/sazharul/insurance-platform-demo) — rebranded as **CoverSure** with synthetic tariff data, DEMO_MODE payment bypass, and Docker Compose. Clone locally to explore policy management, premium calculators, and REST APIs.

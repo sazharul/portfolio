@@ -216,6 +216,69 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
       ],
     },
   },
+  "insurance-platform": {
+    slug: "insurance-platform",
+    metaTitle:
+      "Insurance Management System Case Study — Laravel Premium Calculator & APIs | Md. Azharul Islam (Sohan)",
+    metaDescription:
+      "Non-life insurance platform with 12+ online premium calculators, admin tariff CMS, customer dashboards, SSLCommerz checkout, and Flutter REST APIs. Production at eastlandinsurance.com. Open-source CoverSure demo on GitHub.",
+    keywords: [
+      "insurance platform developer",
+      "Laravel insurance calculator",
+      "premium calculation engine",
+      "insurance REST API developer",
+      "Flutter insurance API",
+      "SSLCommerz insurance",
+      "hire Laravel insurance developer",
+      "insurance management system",
+      "non-life insurance Bangladesh",
+      "insurance platform case study",
+      "Laravel business rules engine",
+    ],
+    articleHeadline: "Building an Insurance Management System with Laravel Premium Calculators",
+    articleSummary:
+      "Case study of a non-life insurance platform — 12+ online premium calculators (fire, motor, marine, mediclaim, personal accident), configurable tariff engine with 40+ lookup models, admin CMS, customer portal with SSLCommerz checkout, and Sanctum REST APIs for Flutter mobile apps. Production at eastlandinsurance.com. Open-source CoverSure demo on GitHub.",
+    datePublished: "2024-01-01",
+    dateModified: "2026-03-15",
+    faqs: [
+      {
+        question: "What technologies power the insurance management system?",
+        answer:
+          "The platform uses Laravel 9 (PHP 8.1+) with MySQL 8, Blade admin and public UI, Sanctum for mobile API auth, SSLCommerz for policy purchase payments, and 156 database migrations across 40+ calculator tariff models.",
+      },
+      {
+        question: "Is there a live demo of the insurance platform?",
+        answer:
+          "The production client site is live at eastlandinsurance.com. For code review, an open-source sanitized demo (insurance-platform-demo) is available on GitHub as CoverSure — clone and run with Docker Compose locally.",
+      },
+      {
+        question: "How do I clone and run the insurance platform demo?",
+        answer:
+          "Clone github.com/sazharul/insurance-platform-demo, run docker compose up --build, open localhost:8001, and log in with admin@coversure.demo / DemoAdmin123! or customer@coversure.demo / DemoUser123!. OTP is 123456 in DEMO_MODE.",
+      },
+      {
+        question: "What insurance products does the platform support?",
+        answer:
+          "Fire, motor, marine cargo, overseas mediclaim, personal accident, peoples personal accident, Bangobandhu Suroksha Bima, flat/apartment owner, cash-in-safe, cash-in-transit, cash on counter, and boiler insurance — each with its own tariff lookup tables and calculation logic.",
+      },
+      {
+        question: "What does DEMO_MODE do?",
+        answer:
+          "When DEMO_MODE=true (the default), SSLCommerz payment redirects are skipped and orders complete instantly. API OTP is fixed to 123456. Mail uses the log driver — no SMTP or payment gateway credentials required.",
+      },
+    ],
+    howTo: {
+      name: "How to run the Insurance Platform demo locally",
+      description: "Clone and start the CoverSure insurance demo using Docker Compose.",
+      steps: [
+        "Clone: git clone https://github.com/sazharul/insurance-platform-demo.git",
+        "Navigate: cd insurance-platform-demo",
+        "Start: docker compose up --build",
+        "Open website at http://localhost:8001",
+        "Log in with admin@coversure.demo / DemoAdmin123! and explore premium calculators",
+      ],
+    },
+  },
   "reverb-platform": {
     slug: "reverb-platform",
     metaTitle:
