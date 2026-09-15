@@ -216,6 +216,68 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
       ],
     },
   },
+  "reverb-platform": {
+    slug: "reverb-platform",
+    metaTitle:
+      "Real-time Event Platform Case Study — Laravel Reverb & WebSockets | Md. Azharul Islam (Sohan)",
+    metaDescription:
+      "Self-hosted multi-tenant Laravel Reverb platform — HMAC-signed event API, channel ACLs, subscription plans, event logging, and Pulse monitoring. Open-source PulseWire demo on GitHub for local review.",
+    keywords: [
+      "Laravel Reverb developer",
+      "WebSocket platform Laravel",
+      "multi-tenant real-time",
+      "Pusher alternative Laravel",
+      "Laravel Reverb portfolio",
+      "real-time event API",
+      "hire Laravel WebSocket developer",
+      "Laravel Pulse monitoring",
+      "real-time platform case study",
+      "Laravel SaaS developer",
+    ],
+    articleHeadline: "Building a Multi-tenant Real-time Event Platform with Laravel Reverb",
+    articleSummary:
+      "Case study of a self-hosted Pusher-style platform built on Laravel Reverb — multi-tenant app management, HMAC-signed event trigger API, channel permission enforcement via custom EventDispatcher, subscription plan limits, SSLCommerz billing with DEMO_MODE, and Laravel Pulse monitoring. Open-source PulseWire demo on GitHub.",
+    datePublished: "2026-01-01",
+    dateModified: "2026-03-15",
+    faqs: [
+      {
+        question: "What technologies power the real-time event platform?",
+        answer:
+          "The platform uses Laravel 12 with Laravel Reverb for WebSockets, Livewire for the dashboard, Spatie Permission for RBAC, Sanctum for API tokens, database queues for event log jobs, SSLCommerz for subscriptions (bypassed in DEMO_MODE), and Laravel Pulse for production monitoring.",
+      },
+      {
+        question: "Is there a live demo of the real-time platform?",
+        answer:
+          "No public live demo. An open-source sanitized recreation (reverb-platform-demo) is available on GitHub as PulseWire — clone and run with Docker Compose locally.",
+      },
+      {
+        question: "How do I clone and run the Reverb platform demo?",
+        answer:
+          "Clone github.com/sazharul/reverb-platform-demo, run docker compose up --build, open localhost:8000, and log in with demo@pulsewire.demo / DemoUser123!. Trigger events using the HMAC-signed API example in the README.",
+      },
+      {
+        question: "How does this relate to the Matrimony Platform?",
+        answer:
+          "The Matrimony Platform uses Laravel Reverb for real-time chat on mybouma.com. This project is the infrastructure layer — a multi-tenant Reverb management platform that can host apps for similar real-time workloads.",
+      },
+      {
+        question: "What does DEMO_MODE do?",
+        answer:
+          "When DEMO_MODE=true (the default), paid subscription plans activate instantly without redirecting to SSLCommerz. Free plan subscription also works without payment gateway credentials.",
+      },
+    ],
+    howTo: {
+      name: "How to run the Real-time Event Platform demo locally",
+      description: "Clone and start the PulseWire demo using Docker Compose.",
+      steps: [
+        "Clone: git clone https://github.com/sazharul/reverb-platform-demo.git",
+        "Navigate: cd reverb-platform-demo",
+        "Start: docker compose up --build",
+        "Open dashboard at http://localhost:8000",
+        "Log in with demo@pulsewire.demo / DemoUser123! and explore My Apps and Events",
+      ],
+    },
+  },
 };
 
 export function getCaseStudySeo(slug: string): CaseStudySeo | undefined {

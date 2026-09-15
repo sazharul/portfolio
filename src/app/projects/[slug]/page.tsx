@@ -15,6 +15,7 @@ const CUSTOM_CASE_STUDY_SLUGS = new Set([
   "matrimony-platform",
   "ecommerce-analytics",
   "ai-shopping-assistant",
+  "reverb-platform",
 ]);
 
 export async function generateStaticParams() {

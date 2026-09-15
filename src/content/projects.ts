@@ -89,6 +89,18 @@ export const projects: Project[] = [
     company: "Wizard Software & Technology Bangladesh Ltd.",
     role: "Lead Implementation Engineer",
   },
+  {
+    slug: "reverb-platform",
+    title: "Real-time Event Platform",
+    tagline: "Multi-tenant Laravel Reverb SaaS with signed APIs and channel permissions",
+    description:
+      "Self-hosted Pusher-style platform — multi-tenant Reverb apps, HMAC-signed event API, channel ACLs, subscription plans, event logging, and Pulse monitoring. Open-source demo on GitHub.",
+    tags: ["Laravel", "Reverb", "WebSockets", "Livewire", "SaaS"],
+    featured: false,
+    repoUrl: "https://github.com/sazharul/reverb-platform-demo",
+    company: "Personal / Infrastructure Project",
+    role: "Software Developer",
+  },
 ];
 
 export function getProject(slug: string): Project | undefined {

@@ -462,6 +462,14 @@ docker compose up --build`}
                   <ExternalLink className="h-4 w-4" />
                 </a>
               ) : null}
+
+              <p className="mt-4 text-sm text-muted">
+                Real-time chat runs on Laravel Reverb. For the multi-tenant Reverb management layer behind similar workloads, see the{" "}
+                <Link href="/projects/reverb-platform" className="text-signal hover:underline">
+                  Real-time Event Platform
+                </Link>{" "}
+                case study.
+              </p>
             </div>
           </div>
         </div>

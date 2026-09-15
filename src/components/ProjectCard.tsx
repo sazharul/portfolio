@@ -11,6 +11,7 @@ const accentBySlug: Record<string, string> = {
   "ecommerce-analytics": "from-emerald-900/50 via-sky-950 to-slate-950",
   "payment-gateway": "from-blue-900/50 via-slate-900 to-slate-950",
   "insurance-platform": "from-cyan-900/40 via-slate-900 to-slate-950",
+  "reverb-platform": "from-cyan-900/50 via-sky-950 to-slate-950",
 };
 
 const actionClass =
