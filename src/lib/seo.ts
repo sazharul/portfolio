@@ -378,7 +378,7 @@ export function getProjectJsonLd(project: {
   tagline: string;
   slug: string;
   demoUrl?: string;
-  repoUrl: string;
+  repoUrl?: string;
   tags: string[];
   company?: string;
 }) {

@@ -279,6 +279,69 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
       ],
     },
   },
+  "enterprise-retail": {
+    slug: "enterprise-retail",
+    metaTitle:
+      "Enterprise Retail Platform Case Study — Laravel, React & Node.js Catalog API | Md. Azharul Islam (Sohan)",
+    metaDescription:
+      "Skincare e-commerce at scale — Laravel write API, React storefront, Node.js catalog read layer, multi-warehouse inventory, Flutter REST APIs. Production at perfectobd.com. Open-source GlowCart demo on GitHub.",
+    keywords: [
+      "enterprise retail developer",
+      "Laravel e-commerce developer",
+      "React e-commerce portfolio",
+      "Node.js catalog API",
+      "Laravel React full stack",
+      "Flutter e-commerce API",
+      "hire Laravel e-commerce developer",
+      "skincare e-commerce Bangladesh",
+      "enterprise retail case study",
+      "multi-warehouse inventory Laravel",
+      "e-commerce performance optimization",
+    ],
+    articleHeadline: "Building an Enterprise Retail Platform with Laravel, React, and Node.js",
+    articleSummary:
+      "Case study of a production skincare e-commerce platform — Laravel for auth, cart, and orders; React storefront; Node.js read API for catalog performance; multi-warehouse stock; Pathao shipping; Flutter mobile APIs. Production at perfectobd.com. Open-source GlowCart demo on GitHub.",
+    datePublished: "2023-06-01",
+    dateModified: "2026-03-15",
+    faqs: [
+      {
+        question: "What technologies power the enterprise retail platform?",
+        answer:
+          "Laravel 10 (PHP) for the write API and admin, React 18 with Vite and Redux for the storefront, Node.js Express for high-traffic catalog reads, MySQL 8, and Sanctum for API authentication. A Flutter mobile app consumes the Laravel APIs in production.",
+      },
+      {
+        question: "Why was a Node.js catalog API added?",
+        answer:
+          "Public catalog endpoints (homepage sections, product filters, attribute facets) slowed under production load on Laravel. A dedicated read-only Express layer with GZIP compression and raw SQL offloads those paths while Laravel remains the source of truth for writes.",
+      },
+      {
+        question: "How do I clone and run the GlowCart demo?",
+        answer:
+          "Clone github.com/sazharul/enterprise-retail-demo, run docker compose up --build, open localhost:5174 for the storefront. Admin: admin@glowcart.demo / DemoAdmin123!. Customer: customer@glowcart.demo / DemoUser123!. OTP is 123456 in DEMO_MODE.",
+      },
+      {
+        question: "Is there a live production site?",
+        answer:
+          "Yes — the production client site is live at perfectobd.com. The GitHub repo is a sanitized demo (GlowCart) for portfolio review, not the full production codebase.",
+      },
+      {
+        question: "What does DEMO_MODE do in the retail demo?",
+        answer:
+          "DEMO_MODE stubs Pathao shipping with canned data, returns fixed OTP 123456, and serves static JSON for offers, shipping (60 BDT), and rewards — no production pricing engines or third-party credentials required.",
+      },
+    ],
+    howTo: {
+      name: "How to run the Enterprise Retail demo locally",
+      description: "Clone and start the GlowCart enterprise retail demo using Docker Compose.",
+      steps: [
+        "Clone: git clone https://github.com/sazharul/enterprise-retail-demo.git",
+        "Navigate: cd enterprise-retail-demo",
+        "Start: docker compose up --build",
+        "Open storefront at http://localhost:5174",
+        "Log in with customer@glowcart.demo / DemoUser123! or admin@glowcart.demo / DemoAdmin123!",
+      ],
+    },
+  },
   "reverb-platform": {
     slug: "reverb-platform",
     metaTitle:

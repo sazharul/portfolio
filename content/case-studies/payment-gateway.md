@@ -28,6 +28,8 @@ I was the primary implementation engineer — translating business workflow into
 
 ---
 
-## Portfolio Recreation
+## Source code & portfolio notice
 
-Planned demo: `payment-gateway-demo` — wallet, transactions, admin panel, mock payment provider. No real banking integration.
+**Production source code is not published on GitHub.** This case study describes real production work for a US client. Code review may be available on request during interviews.
+
+There is no public `payment-gateway-demo` repository. Public GitHub demos on my profile are independent skill showcases — same technology patterns, not client production code. See [Legal & demo notice](/legal).

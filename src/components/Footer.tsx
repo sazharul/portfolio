@@ -7,7 +7,10 @@ export function Footer() {
         <p>
           © {new Date().getFullYear()} {AUTHOR_NAME} — {JOB_TITLE_SHORT} (Laravel/PHP). Dhaka, Bangladesh.
         </p>
-        <p className="font-mono text-xs">Known as {NICKNAME} · Open to remote and international roles</p>
+        <p className="font-mono text-xs">
+          Known as {NICKNAME} · Open to remote and international roles ·{" "}
+          <a href="/legal" className="hover:text-signal transition-colors">Portfolio demos · Legal notice</a>
+        </p>
       </div>
     </footer>
   );

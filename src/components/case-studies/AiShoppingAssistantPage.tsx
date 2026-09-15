@@ -14,6 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import { CaseStudyFaq } from "@/components/case-studies/CaseStudyFaq";
+import { PortfolioDemoBanner } from "@/components/case-studies/PortfolioDemoBanner";
 import type { CaseStudySeo } from "@/content/case-study-seo";
 import type { Project } from "@/content/projects";
 
@@ -130,6 +131,10 @@ export function AiShoppingAssistantPage({ project, seo }: AiShoppingAssistantPag
             <ArrowLeft className="h-4 w-4" />
             Back to projects
           </Link>
+
+          <div className="mt-6">
+            <PortfolioDemoBanner />
+          </div>
 
           <div className="mt-8 grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             <div className="space-y-6">

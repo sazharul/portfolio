@@ -11,6 +11,7 @@ const accentBySlug: Record<string, string> = {
   "ecommerce-analytics": "from-emerald-900/50 via-sky-950 to-slate-950",
   "payment-gateway": "from-blue-900/50 via-slate-900 to-slate-950",
   "insurance-platform": "from-cyan-900/40 via-slate-900 to-slate-950",
+  "enterprise-retail": "from-rose-900/50 via-fuchsia-950 to-slate-950",
   "reverb-platform": "from-cyan-900/50 via-sky-950 to-slate-950",
 };
 
@@ -64,14 +65,16 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </a>
         ) : null}
 
-        <a
-          href={project.repoUrl}
-          target="_blank"
-          rel="noreferrer"
-          className={`${actionClass} border-line bg-ink/60 text-muted hover:border-signal/40 hover:text-text`}
-        >
-          GitHub ↗
-        </a>
+        {project.repoUrl ? (
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noreferrer"
+            className={`${actionClass} border-line bg-ink/60 text-muted hover:border-signal/40 hover:text-text`}
+          >
+            GitHub ↗
+          </a>
+        ) : null}
       </div>
     </article>
   );

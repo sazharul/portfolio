@@ -61,4 +61,9 @@ export const hiringFaqs: HiringFaq[] = [
     answer:
       "Laravel, PHP, JavaScript, React, MySQL, REST APIs, Tailwind CSS, OpenAI API, and production tooling for fintech, e-commerce, and analytics products.",
   },
+  {
+    question: "Are your GitHub repos the actual client production code?",
+    answer:
+      "No. Public demo repositories are independent portfolio showcases — same technology stack and architecture patterns as my production work, but not client or employer source code. Production systems stay in private repositories. See the legal & demo notice page for details.",
+  },
 ];

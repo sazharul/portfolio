@@ -17,6 +17,7 @@ const CUSTOM_CASE_STUDY_SLUGS = new Set([
   "ai-shopping-assistant",
   "reverb-platform",
   "insurance-platform",
+  "enterprise-retail",
 ]);
 
 export async function generateStaticParams() {
@@ -84,14 +85,16 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 Live demo ↗
               </a>
             ) : null}
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-ink/60 px-3.5 py-2 text-sm font-medium text-muted transition-colors hover:border-signal/40 hover:text-text"
-            >
-              GitHub ↗
-            </a>
+            {project.repoUrl ? (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-ink/60 px-3.5 py-2 text-sm font-medium text-muted transition-colors hover:border-signal/40 hover:text-text"
+              >
+                GitHub ↗
+              </a>
+            ) : null}
           </div>
         </div>
 

@@ -6,7 +6,7 @@ export type Project = {
   tags: string[];
   featured: boolean;
   demoUrl?: string;
-  repoUrl: string;
+  repoUrl?: string;
   company?: string;
   role?: string;
 };
@@ -55,11 +55,10 @@ export const projects: Project[] = [
     title: "Payment Gateway Platform",
     tagline: "Centralized fintech payment workflow for multi-business operations",
     description:
-      "US client payment gateway unifying transaction workflows across multiple businesses with admin reporting and banking API integration.",
+      "US client payment gateway unifying transaction workflows across multiple businesses with admin reporting and banking API integration. Production code is private — case study available; source code review on request during interviews.",
     tags: ["Laravel", "FinTech", "REST API", "RBAC"],
     featured: true,
     demoUrl: "https://payments.azharulislamsohan.com",
-    repoUrl: "https://github.com/sazharul/payment-gateway-demo",
     company: "Hsblco Solution",
     role: "Full-Stack Web Developer → Team Leader",
   },
@@ -79,13 +78,13 @@ export const projects: Project[] = [
   {
     slug: "enterprise-retail",
     title: "Enterprise Retail Platform",
-    tagline: "Large-scale retail operations with inventory and order workflows",
+    tagline: "Laravel + React e-commerce with Node.js catalog API and Flutter mobile",
     description:
-      "Enterprise retail system with complex inventory, order management, and production API optimization.",
-    tags: ["Laravel", "E-commerce", "MySQL", "API"],
-    featured: false,
-    demoUrl: "https://analytics.azharulislamsohan.com",
-    repoUrl: "https://github.com/sazharul",
+      "Skincare retail at scale — multi-warehouse inventory, rewards, Pathao shipping, React storefront, Node read API for performance, Flutter app APIs. Production at perfectobd.com. Open-source GlowCart demo.",
+    tags: ["Laravel", "React", "Node.js", "E-commerce", "MySQL", "Flutter API"],
+    featured: true,
+    demoUrl: "https://perfectobd.com/",
+    repoUrl: "https://github.com/sazharul/enterprise-retail-demo",
     company: "Wizard Software & Technology Bangladesh Ltd.",
     role: "Lead Implementation Engineer",
   },
