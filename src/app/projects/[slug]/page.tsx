@@ -11,8 +11,12 @@ type ProjectPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+const CUSTOM_CASE_STUDY_SLUGS = new Set(["matrimony-platform", "ecommerce-analytics"]);
+
 export async function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return projects
+    .filter((project) => !CUSTOM_CASE_STUDY_SLUGS.has(project.slug))
+    .map((project) => ({ slug: project.slug }));
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {

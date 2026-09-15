@@ -105,6 +105,8 @@ type PageSeoOptions = {
   ogType?: "website" | "article";
   noIndex?: boolean;
   absoluteTitle?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
 };
 
 export function createPageMetadata(options: PageSeoOptions): Metadata {
@@ -131,6 +133,15 @@ export function createPageMetadata(options: PageSeoOptions): Metadata {
       locale: "en_US",
       type: options.ogType ?? "website",
       images: [profileImage],
+      ...(options.publishedTime ? { publishedTime: options.publishedTime } : {}),
+      ...(options.modifiedTime ? { modifiedTime: options.modifiedTime } : {}),
+      ...(options.ogType === "article"
+        ? {
+            authors: [AUTHOR_NAME],
+            section: "Projects",
+            tags: options.keywords?.slice(0, 8),
+          }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -399,5 +410,89 @@ export function getProjectJsonLd(project: {
         }
       : {}),
     sameAs: [project.demoUrl, project.repoUrl].filter(Boolean),
+  };
+}
+
+export function getTechArticleJsonLd(options: {
+  headline: string;
+  description: string;
+  path: string;
+  datePublished: string;
+  dateModified: string;
+  keywords: string[];
+  about: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: options.headline,
+    description: options.description,
+    url: `${SITE_URL}${options.path}`,
+    datePublished: options.datePublished,
+    dateModified: options.dateModified,
+    inLanguage: "en-US",
+    keywords: options.keywords.join(", "),
+    author: {
+      "@type": "Person",
+      name: AUTHOR_NAME,
+      url: SITE_URL,
+      jobTitle: JOB_TITLE,
+    },
+    publisher: {
+      "@type": "Person",
+      name: AUTHOR_NAME,
+      url: SITE_URL,
+    },
+    about: options.about.map((topic) => ({
+      "@type": "Thing",
+      name: topic,
+    })),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}${options.path}`,
+    },
+  };
+}
+
+export function getHowToJsonLd(options: {
+  name: string;
+  description: string;
+  steps: string[];
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: options.name,
+    description: options.description,
+    url: `${SITE_URL}${options.path}`,
+    step: options.steps.map((text, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      text,
+    })),
+  };
+}
+
+export function getWebPageJsonLd(options: {
+  name: string;
+  description: string;
+  path: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: options.name,
+    description: options.description,
+    url: `${SITE_URL}${options.path}`,
+    inLanguage: "en-US",
+    isPartOf: {
+      "@type": "WebSite",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    author: {
+      "@id": `${SITE_URL}#person`,
+    },
   };
 }

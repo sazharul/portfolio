@@ -86,3 +86,45 @@ h1, h2, h3 {
     display: none;
   }
 }
+
+/* Matrimony case study page */
+.matrimony-hero-card {
+  animation: matrimony-float 6s ease-in-out infinite;
+}
+
+@keyframes matrimony-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .matrimony-hero-card {
+    animation: none;
+  }
+}
+
+/* E-commerce analytics case study page */
+.analytics-hero-card {
+  animation: analytics-float 6s ease-in-out infinite;
+}
+
+@keyframes analytics-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analytics-hero-card {
+    animation: none;
+  }
+}
