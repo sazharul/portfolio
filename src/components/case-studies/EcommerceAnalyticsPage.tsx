@@ -188,7 +188,7 @@ export function EcommerceAnalyticsPage({ project, seo }: EcommerceAnalyticsPageP
               </div>
 
               <p className="text-sm text-muted/80">
-                No public live demo — production EnoxTracker code is private. This repo is an original recreation for portfolio review.
+                No public live demo — production analytics code is private. This repo is an original recreation for portfolio review.
               </p>
 
               <div className="flex flex-wrap gap-2 pt-1">
@@ -421,7 +421,7 @@ export function EcommerceAnalyticsPage({ project, seo }: EcommerceAnalyticsPageP
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-signal-2">Portfolio recreation</p>
               <h2 className="mt-2 text-2xl font-bold md:text-3xl">Open-source on GitHub</h2>
               <p className="mt-4 leading-relaxed text-muted">
-                An original recreation for portfolio code review — not a copy of the production EnoxTracker codebase.
+                An original recreation for portfolio code review — not a copy of any production client codebase.
                 Demonstrates the same patterns: resilient SDK, secure ingest, session resolution, and admin drill-down.
               </p>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/JsonLd";
+import { PortfolioDemoBanner } from "@/components/case-studies/PortfolioDemoBanner";
 import { ProjectCard } from "@/components/ProjectCard";
 import { projects } from "@/content/projects";
 import { createPageMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
@@ -34,9 +35,10 @@ export default function ProjectsPage() {
         <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">Portfolio</p>
         <h1 className="text-4xl font-bold mt-2">Projects</h1>
         <p className="text-muted mt-3 max-w-2xl">
-          Case studies from production work and portfolio-safe demos. Each project links to a live demo and GitHub where available.
+          Case studies from production work and portfolio-safe demos. Production site links point to live client products; GitHub repos are independent demos for hiring review.
         </p>
       </div>
+      <PortfolioDemoBanner />
       <div className="grid md:grid-cols-2 gap-6">
         {projects.map((project) => (
           <ProjectCard key={project.slug} project={project} />

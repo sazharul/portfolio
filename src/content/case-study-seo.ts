@@ -135,7 +135,7 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
       {
         question: "Is the production analytics code publicly available?",
         answer:
-          "No. The production EnoxTracker codebase remains private. The GitHub repository (ecommerce-analytics-platform) is an original recreation demonstrating the same architectural patterns at showcase-friendly scale for portfolio code review.",
+          "No. The production analytics codebase remains private. The GitHub repository (ecommerce-analytics-platform) is an original recreation demonstrating the same architectural patterns at showcase-friendly scale for portfolio code review.",
       },
       {
         question: "How do I run the e-commerce analytics demo locally?",

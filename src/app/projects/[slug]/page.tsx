@@ -83,7 +83,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 rel="noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-lg border border-warm/30 bg-warm/10 px-3.5 py-2 text-sm font-medium text-warm transition-colors hover:border-warm/50 hover:bg-warm/15"
               >
-                Live demo ↗
+                Production site ↗
               </a>
             ) : null}
             {project.repoUrl ? (

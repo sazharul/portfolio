@@ -61,7 +61,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             rel="noreferrer"
             className={`${actionClass} border-warm/30 bg-warm/10 text-warm hover:border-warm/50 hover:bg-warm/15`}
           >
-            Live demo ↗
+            Production site ↗
           </a>
         ) : null}
 

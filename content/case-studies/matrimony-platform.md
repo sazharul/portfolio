@@ -68,7 +68,7 @@ I built the full-stack application — Laravel API backend, Next.js frontend, re
 
 | Pattern | Demo implementation |
 |---------|-------------------|
-| Rebrand | Enorsia/My Bouma → MatriConnect (fictional demo name) |
+| Rebrand | My Bouma → MatriConnect (fictional demo name) |
 | Payments | `DEMO_MODE=true` bypasses SSLCommerz, activates plans instantly |
 | Photos | SVG placeholder avatars (no Cloudflare Images) |
 | Users | 30 seeded demo accounts with Faker data |

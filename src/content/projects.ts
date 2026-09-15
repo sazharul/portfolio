@@ -58,7 +58,6 @@ export const projects: Project[] = [
       "US client payment gateway unifying transaction workflows across multiple businesses with admin reporting and banking API integration. Production code is private — case study available; source code review on request during interviews.",
     tags: ["Laravel", "FinTech", "REST API", "RBAC"],
     featured: true,
-    demoUrl: "https://payments.azharulislamsohan.com",
     company: "Hsblco Solution",
     role: "Full-Stack Web Developer → Team Leader",
   },

@@ -384,32 +384,25 @@ export function getProjectJsonLd(project: {
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: project.title,
-    description: `${project.tagline}. ${project.description}`,
+    "@type": "TechArticle",
+    headline: project.title,
+    description: `${project.tagline}. ${project.description} Portfolio case study — public GitHub repos are independent demos for hiring review, not client production source code.`,
     url: `${SITE_URL}/projects/${project.slug}`,
-    applicationCategory: "BusinessApplication",
-    operatingSystem: "Web",
     keywords: project.tags.join(", "),
     author: {
       "@type": "Person",
       name: AUTHOR_NAME,
       url: SITE_URL,
     },
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
     ...(project.company
       ? {
-          provider: {
+          about: {
             "@type": "Organization",
             name: project.company,
           },
         }
       : {}),
-    sameAs: [project.demoUrl, project.repoUrl].filter(Boolean),
+    ...(project.repoUrl ? { sameAs: [project.repoUrl] } : {}),
   };
 }
 

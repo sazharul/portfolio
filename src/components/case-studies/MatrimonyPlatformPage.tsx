@@ -220,7 +220,7 @@ export function MatrimonyPlatformPage({ project, seo }: MatrimonyPlatformPagePro
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-500/20">
                         <Heart className="h-4 w-4 text-amber-400" />
                       </div>
-                      <span className="text-sm font-semibold">My Bouma</span>
+                      <span className="text-sm font-semibold">MatriConnect</span>
                     </div>
                     <span className="rounded-full bg-emerald-500/15 px-2 py-0.5 text-[10px] font-medium text-emerald-300">
                       Verified
@@ -324,7 +324,7 @@ export function MatrimonyPlatformPage({ project, seo }: MatrimonyPlatformPagePro
             <p className="mt-4 leading-relaxed text-muted">
               I built the full-stack application end to end — Laravel API backend, Next.js frontend,
               real-time chat, WebRTC calls, subscription payments, face verification, and admin moderation tools.
-              The platform serves thousands of families with verified profiles, smart compatibility scoring,
+              The platform supports verified profiles, smart compatibility scoring,
               and family-friendly communication workflows.
             </p>
           </div>
