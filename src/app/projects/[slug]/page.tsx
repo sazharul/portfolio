@@ -11,7 +11,11 @@ type ProjectPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-const CUSTOM_CASE_STUDY_SLUGS = new Set(["matrimony-platform", "ecommerce-analytics"]);
+const CUSTOM_CASE_STUDY_SLUGS = new Set([
+  "matrimony-platform",
+  "ecommerce-analytics",
+  "ai-shopping-assistant",
+]);
 
 export async function generateStaticParams() {
   return projects
@@ -67,13 +71,13 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           <p className="font-mono text-xs text-signal-2 uppercase tracking-wider">{project.company}</p>
           <h1 className="text-4xl font-bold">{project.title}</h1>
           <p className="text-muted text-lg">{project.tagline}</p>
-          <div className="flex flex-wrap gap-3 pt-2">
+          <div className="flex flex-wrap gap-2 pt-2">
             {project.demoUrl ? (
               <a
                 href={project.demoUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-warm text-ink text-sm font-medium"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-warm/30 bg-warm/10 px-3.5 py-2 text-sm font-medium text-warm transition-colors hover:border-warm/50 hover:bg-warm/15"
               >
                 Live demo ↗
               </a>
@@ -82,9 +86,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               href={project.repoUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-line text-sm font-medium"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-ink/60 px-3.5 py-2 text-sm font-medium text-muted transition-colors hover:border-signal/40 hover:text-text"
             >
-              {project.demoUrl ? "GitHub" : "View on GitHub ↗"}
+              GitHub ↗
             </a>
           </div>
         </div>

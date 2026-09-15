@@ -5,13 +5,15 @@ import { projects } from "@/content/projects";
 import { createPageMetadata, getBreadcrumbJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Projects",
+  title: "Projects — AI Shopping Assistant, Matrimony Platform & E-commerce Case Studies",
   description:
-    "Laravel & PHP projects by Md. Azharul Islam (Sohan) — e-commerce analytics, payment gateways, insurance platforms, enterprise retail & AI assistants.",
+    "Portfolio projects by Md. Azharul Islam (Sohan) — AI shopping assistant (LangGraph, RAG, OpenAI) on enorsia.com, matrimony platform at mybouma.com, e-commerce analytics, payment gateways, and insurance systems.",
   path: "/projects",
   keywords: [
     "azharul software engineer projects",
     "sohan laravel projects",
+    "AI shopping assistant case study",
+    "LangGraph portfolio project",
     "azharul payment gateway project",
     "sohan e-commerce analytics",
     "azharul sohan portfolio projects",

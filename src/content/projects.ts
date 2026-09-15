@@ -13,6 +13,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "ai-shopping-assistant",
+    title: "AI Shopping Assistant",
+    tagline: "LangGraph agent with RAG product search, image search, and order tools",
+    description:
+      "Production AI shopping assistant for Enorsia UK fashion — conversational product discovery, FAQ RAG, CLIP image search, and Laravel order integration. Open-source demo on GitHub.",
+    tags: ["Python", "FastAPI", "LangGraph", "OpenAI", "RAG", "React"],
+    featured: true,
+    demoUrl: "https://enorsia.com/",
+    repoUrl: "https://github.com/sazharul/ai-shopping-assistant-demo",
+    company: "Enorsia (Pakiza Group)",
+    role: "Software Developer",
+  },
+  {
     slug: "matrimony-platform",
     title: "Matrimony Platform",
     tagline: "Full-stack matchmaking with real-time chat, video calls, and face verification",
@@ -75,19 +88,6 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/sazharul",
     company: "Wizard Software & Technology Bangladesh Ltd.",
     role: "Lead Implementation Engineer",
-  },
-  {
-    slug: "ai-shopping-assistant",
-    title: "AI Shopping Assistant",
-    tagline: "OpenAI-powered product search and customer assistance",
-    description:
-      "Production-style AI assistant with chat-based product discovery and image search integration.",
-    tags: ["Laravel", "OpenAI API", "AI", "E-commerce"],
-    featured: false,
-    demoUrl: "https://analytics.azharulislamsohan.com",
-    repoUrl: "https://github.com/sazharul",
-    company: "Enorsia (Pakiza Group)",
-    role: "Software Developer",
   },
 ];
 

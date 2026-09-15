@@ -151,6 +151,71 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
       ],
     },
   },
+  "ai-shopping-assistant": {
+    slug: "ai-shopping-assistant",
+    metaTitle:
+      "AI Shopping Assistant Case Study — LangGraph, RAG & OpenAI | Md. Azharul Islam (Sohan)",
+    metaDescription:
+      "Production AI shopping assistant for UK fashion e-commerce — LangGraph ReAct agent, hybrid FAISS + BM25 RAG, CLIP image search, SSE streaming, and Laravel order tools. Live widget at enorsia.com. Open-source demo on GitHub.",
+    keywords: [
+      "AI shopping assistant developer",
+      "LangGraph e-commerce",
+      "RAG product search",
+      "FastAPI LangChain developer",
+      "OpenAI chat widget",
+      "CLIP image search e-commerce",
+      "hire AI developer Laravel",
+      "conversational commerce",
+      "Enorsia AI developer",
+      "AI shopping assistant case study",
+      "LangGraph portfolio",
+      "FAISS BM25 RAG",
+    ],
+    articleHeadline: "Building a Production AI Shopping Assistant with LangGraph and RAG",
+    articleSummary:
+      "Case study of a production AI shopping assistant for Enorsia UK fashion — LangGraph ReAct agent with 13+ commerce tools, hybrid FAISS + BM25 product and FAQ retrieval, CLIP image search, SSE streaming chat, and an embeddable React widget. Includes an open-source GitHub demo with synthetic data.",
+    datePublished: "2025-06-01",
+    dateModified: "2026-03-15",
+    faqs: [
+      {
+        question: "What technologies power the AI shopping assistant?",
+        answer:
+          "The assistant uses Python 3.11 with FastAPI and LangGraph for the agent, OpenAI GPT-4o for reasoning, text-embedding-3-small for vector search, FAISS + BM25 hybrid RAG for products and FAQs, optional CLIP image search, and a React 19 embeddable chat widget with SSE streaming.",
+      },
+      {
+        question: "Is there a live demo of the AI shopping assistant?",
+        answer:
+          "The production widget is embedded on enorsia.com. For code review, an open-source sanitized demo (ai-shopping-assistant-demo) is available on GitHub with synthetic StyleHub catalog data and DEMO_MODE API stubs.",
+      },
+      {
+        question: "Can recruiters clone and run the AI shopping assistant demo?",
+        answer:
+          "Yes. Clone github.com/sazharul/ai-shopping-assistant-demo, set OPENAI_API_KEY, and run docker compose up --build. The chat widget runs at localhost:5173 and the API at localhost:8001/docs. Admin login: admin@stylehub.demo / DemoAdmin123!",
+      },
+      {
+        question: "How does image search work without publishing client data?",
+        answer:
+          "The GitHub demo ships with 18 synthetic products and local SVG placeholder images. CLIP image search builds a FAISS index only from these demo images — no production CDN paths or client catalog data are included.",
+      },
+      {
+        question: "What does DEMO_MODE do in the open-source demo?",
+        answer:
+          "When DEMO_MODE=true (the default), all Laravel commerce API calls return canned JSON stubs for order status, returns, discounts, and shipping. No outbound calls to a production backend are made.",
+      },
+    ],
+    howTo: {
+      name: "How to run the AI Shopping Assistant demo locally",
+      description:
+        "Clone and start the open-source AI shopping assistant demo using Docker Compose.",
+      steps: [
+        "Clone: git clone https://github.com/sazharul/ai-shopping-assistant-demo.git",
+        "Navigate: cd ai-shopping-assistant-demo",
+        "Set API key: export OPENAI_API_KEY=your-openai-key",
+        "Start services: docker compose up --build",
+        "Open the chat widget at http://localhost:5173 and API docs at http://localhost:8001/docs",
+      ],
+    },
+  },
 };
 
 export function getCaseStudySeo(slug: string): CaseStudySeo | undefined {
