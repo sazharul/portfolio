@@ -13,6 +13,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "matrimony-platform",
+    title: "Matrimony Platform",
+    tagline: "Full-stack matchmaking with real-time chat, video calls, and face verification",
+    description:
+      "Production matrimonial platform for My Bouma — profiles, compatibility matching, subscriptions, WebRTC calls, and admin moderation. Open-source demo repo available for local review.",
+    tags: ["Laravel", "Next.js", "WebRTC", "Real-time", "MySQL", "Subscriptions"],
+    featured: true,
+    demoUrl: "https://mybouma.com/",
+    repoUrl: "https://github.com/sazharul/matrimony-platform-demo",
+    company: "My Bouma (Client Project)",
+    role: "Full-Stack Developer",
+  },
+  {
     slug: "ecommerce-analytics",
     title: "E-commerce Analytics Platform",
     tagline: "Event tracking, visitor journeys, and business dashboards",
