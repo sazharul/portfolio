@@ -2,6 +2,8 @@
 
 Next.js portfolio showcasing projects, case studies, and contact links.
 
+Public GitHub demos linked from this site are **independent portfolio showcases for hiring** — not client or employer production source code. See [/legal](https://azharulislamsohan.com/legal) on the live site.
+
 ## Develop
 
 ```bash

@@ -41,3 +41,9 @@ docker compose up --build
 ```
 
 Storefront: http://localhost:5174 · API: http://localhost:8002/api · Catalog: http://localhost:4001/api/node
+
+---
+
+## Portfolio & legal notice
+
+The [enterprise-retail-demo](https://github.com/sazharul/enterprise-retail-demo) repository (GlowCart) is an **independent portfolio showcase** for hiring review — same technology stack and architecture patterns as production work, **not** the source code of PerfectoBD or any client. [Legal & demo notice](/legal).

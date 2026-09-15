@@ -64,6 +64,8 @@ I built the full-stack application — Laravel API backend, Next.js frontend, re
 
 **Repository:** [github.com/sazharul/matrimony-platform-demo](https://github.com/sazharul/matrimony-platform-demo)
 
+> Independent portfolio demo for hiring review — **not** My Bouma production source code. [Legal & demo notice](/legal).
+
 | Pattern | Demo implementation |
 |---------|-------------------|
 | Rebrand | Enorsia/My Bouma → MatriConnect (fictional demo name) |

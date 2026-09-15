@@ -23,3 +23,9 @@ Rebranded as **PulseWire** in the open-source demo with `DEMO_MODE` payment bypa
 - Subscription plans with connection and message limits
 - Laravel Pulse monitoring integration
 - Pest feature tests for event trigger validation
+
+---
+
+## Portfolio & legal notice
+
+[PulseWire](https://github.com/sazharul/reverb-platform-demo) is an **original portfolio showcase** for hiring review — not production code from any client or employer. [Legal & demo notice](/legal).

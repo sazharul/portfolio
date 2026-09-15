@@ -72,6 +72,11 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
         answer:
           "Multi-step registration, rich matrimony profiles (religious, family, career, horoscope), compatibility matching with daily suggestions, profile search, interests and shortlist, real-time chat, WebRTC audio/video calls, face verification, subscription tiers (Free/Gold), photo moderation, CMS pages, and admin panels.",
       },
+      {
+        question: "Is the GitHub repo My Bouma production source code?",
+        answer:
+          "No. matrimony-platform-demo (MatriConnect) is an independent portfolio showcase for hiring review — same stack and patterns as production work, not the client's source code.",
+      },
     ],
     howTo: {
       name: "How to run the Matrimony Platform demo locally",
@@ -202,6 +207,11 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
         answer:
           "When DEMO_MODE=true (the default), all Laravel commerce API calls return canned JSON stubs for order status, returns, discounts, and shipping. No outbound calls to a production backend are made.",
       },
+      {
+        question: "Is the GitHub repo Enorsia production source code?",
+        answer:
+          "No. ai-shopping-assistant-demo (StyleHub) is an independent portfolio showcase for hiring review — same AI and commerce patterns as production work, not the client's source code.",
+      },
     ],
     howTo: {
       name: "How to run the AI Shopping Assistant demo locally",
@@ -266,6 +276,11 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
         answer:
           "When DEMO_MODE=true (the default), SSLCommerz payment redirects are skipped and orders complete instantly. API OTP is fixed to 123456. Mail uses the log driver — no SMTP or payment gateway credentials required.",
       },
+      {
+        question: "Is the GitHub repo Eastland Insurance production source code?",
+        answer:
+          "No. insurance-platform-demo (CoverSure) is an independent portfolio showcase for hiring review — same stack and patterns as production work, not the client's source code. Production systems remain private.",
+      },
     ],
     howTo: {
       name: "How to run the Insurance Platform demo locally",
@@ -329,6 +344,11 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
         answer:
           "DEMO_MODE stubs Pathao shipping with canned data, returns fixed OTP 123456, and serves static JSON for offers, shipping (60 BDT), and rewards — no production pricing engines or third-party credentials required.",
       },
+      {
+        question: "Is the GitHub repo PerfectoBD production source code?",
+        answer:
+          "No. enterprise-retail-demo (GlowCart) is an independent portfolio showcase for hiring review — same stack and patterns as production work, not the client's source code. Production systems remain private.",
+      },
     ],
     howTo: {
       name: "How to run the Enterprise Retail demo locally",
@@ -390,6 +410,11 @@ export const caseStudySeo: Record<string, CaseStudySeo> = {
         question: "What does DEMO_MODE do?",
         answer:
           "When DEMO_MODE=true (the default), paid subscription plans activate instantly without redirecting to SSLCommerz. Free plan subscription also works without payment gateway credentials.",
+      },
+      {
+        question: "Is the GitHub repo production client source code?",
+        answer:
+          "No. reverb-platform-demo (PulseWire) is an original portfolio showcase for hiring review — not production code from any client or employer.",
       },
     ],
     howTo: {

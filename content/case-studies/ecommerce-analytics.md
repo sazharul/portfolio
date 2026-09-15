@@ -75,4 +75,4 @@ npm install && npm run build && php artisan serve
 
 Then open `/demo-store` and `/admin/tracker/dashboard` (login: `admin@analytics.demo` / `password`).
 
-**Note:** Production EnoxTracker code remains private. This repo is an original recreation for portfolio code review — not a copy of the production codebase.
+**Note:** Production analytics code from client work remains private. This repo is an **original portfolio showcase** for hiring review — not client production source code. [Legal & demo notice](/legal).

@@ -27,3 +27,5 @@ A non-life insurance company needed a digital platform for premium calculation, 
 ## Portfolio Recreation
 
 Open-source demo: [`insurance-platform-demo`](https://github.com/sazharul/insurance-platform-demo) — rebranded as **CoverSure** with synthetic tariff data, DEMO_MODE payment bypass, and Docker Compose. Clone locally to explore policy management, premium calculators, and REST APIs.
+
+This is an **independent portfolio showcase**, not Eastland Insurance PLC production source code. [Legal & demo notice](/legal).

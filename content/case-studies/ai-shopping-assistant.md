@@ -36,3 +36,5 @@ A sanitized portfolio recreation is available on GitHub as **ai-shopping-assista
 - Requires `OPENAI_API_KEY` for FAISS index build and chat
 
 **Clone:** https://github.com/sazharul/ai-shopping-assistant-demo
+
+Independent portfolio demo — **not** Enorsia production source code. [Legal & demo notice](/legal).

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { JsonLd } from "@/components/JsonLd";
 import { MarkdownContent } from "@/components/MarkdownContent";
+import { PortfolioDemoBanner } from "@/components/case-studies/PortfolioDemoBanner";
 import { getProject, projects } from "@/content/projects";
 import { getCaseStudy } from "@/lib/case-studies";
 import { createPageMetadata, DEFAULT_KEYWORDS, getBreadcrumbJsonLd, getProjectJsonLd } from "@/lib/seo";
@@ -97,6 +98,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             ) : null}
           </div>
         </div>
+
+        <PortfolioDemoBanner hasRepo={Boolean(project.repoUrl)} />
 
         {caseStudy ? (
           <MarkdownContent content={caseStudy.content} />
