@@ -55,7 +55,7 @@ export const projects: Project[] = [
     title: "Payment Gateway Platform",
     tagline: "Centralized fintech payment workflow for multi-business operations",
     description:
-      "US client payment gateway unifying transaction workflows across multiple businesses with admin reporting and banking API integration. Production code is private — case study available; source code review on request during interviews.",
+      "US client payment gateway unifying transaction workflows across multiple businesses with admin reporting and banking API integration. No public demo or GitHub repository yet — production code remains private.",
     tags: ["Laravel", "FinTech", "REST API", "RBAC"],
     featured: true,
     company: "Hsblco Solution",

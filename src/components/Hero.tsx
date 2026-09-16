@@ -60,7 +60,7 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
+        <div className="relative mx-auto w-full lg:max-w-none">
           <HeroVisual />
         </div>
       </div>
